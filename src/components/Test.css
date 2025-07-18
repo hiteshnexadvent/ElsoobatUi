@@ -1,0 +1,115 @@
+#testimonial-slider .testimonial-wrapper {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  margin-top: 150px;
+
+}
+
+#testimonial-slider .testimonial-wrapper h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+#testimonial-slider .testimonial-swiper {
+  padding-bottom: 100px; 
+  height: 420px; 
+  margin-top: 50px;
+}
+
+#testimonial-slider .swiper-slide {
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+#testimonial-slider .swiper-slide-active {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+#testimonial-slider .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+#testimonial-slider .testimonial-bubble {
+  position: relative;
+  background-color: #e6f0ff;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #000;
+  max-width: 300px;
+  text-align: left;
+  min-height: 120px;
+}
+
+#testimonial-slider .testimonial-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-top-color: #e6f0ff;
+}
+
+#testimonial-slider .testimonial-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+#testimonial-slider .testimonial-name {
+  display: none;
+}
+
+#testimonial-slider .swiper-slide-active .testimonial-name {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  margin-top: 12px;
+}
+
+#testimonial-slider .swiper-slide-active .testimonial-card {
+  background-color: #f1f8ff;
+  border: 2px solid #003C82;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+#testimonial-slider .swiper-button-prev,
+#testimonial-slider .swiper-button-next {
+  color: #000;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  top: calc(100% - 30px);
+  transform: translateY(-50%);
+  width: auto;
+}
+
+#testimonial-slider .swiper-button-prev {
+  left: calc(50% - 80px);
+}
+
+#testimonial-slider .swiper-button-next {
+  right: calc(50% - 80px);
+}
+
+#testimonial-slider .swiper-button-prev::after,
+#testimonial-slider .swiper-button-next::after {
+  font-size: 24px;
+  font-weight: bold;
+}

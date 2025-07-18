@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* ------------------------------------ header */
+
+#navbar{
+    position: absolute;
+    z-index: 10;
+    top: 40px;
+}
+
+/* ---------------------------------- background image */
+
+#bg-img{
+    background-color: aqua;
+    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/bgimg.jpg');
+
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    background-size: cover;
+}
+
+/* ---------------------------------- swiper slider */
+
+.slider-wrapper {
+  padding: 40px 20px;
+}
+
+.slide-inner {
+  padding: 10px; 
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  padding: 15px; 
+  border: 1px solid #003C82;
+  border-radius: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container:hover{
+    padding: 0;
+}
+
+.mySwiper {
+  --swiper-space-between: 10px !important;
+}
+
+
+.text-only-slide {
+  max-width: 320px;
+  padding: 0px 20px;
+  text-align: left;
+  margin-top: 300px;
+}
+
+.no-border {
+  padding: 0;
+}
+
+.plain-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.plain-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+
+.card, .card-plain {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover, .card-plain:hover {
+  transform: scale(1.02);
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-inner {
+  position: relative;
+  height: 100%;
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: start;
+}
+
+.card-content {
+  color: white;
+  z-index: 2;
+}
+
+.card-content .desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-content .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-plain {
+  background-color: #ffffff;
+  border: 2px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.card-plain .plain-content {
+  color: #111;
+  text-align: left;
+}
+
+.card-plain .plain-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.card-plain .plain-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* -------------------------- products */
+
+.container {
+  padding: 40px 0;
+  /* margin-top: 150px; */
+  /* margin-bottom: 200px; */
+}
+
+.products {
+  background-color: #f9f9f9;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 280px);
+  margin-top: 70px;
+}
+
+.products > div {
+  border: 1px solid #003C82;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: padding 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.products > div:hover .image-wrapper {
+  padding: 0;
+}
+
+.image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Box placements */
+.box1 {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+.box2 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 4;
+}
+
+.box3 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.box4 {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+.text-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 3;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: start;
+}
+
+.text-content h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+.text-content p {
+  font-size: 14px;
+  margin: 0;
+  color: #f1f1f1;
+}
+
+/* ------------- cards */
+
+.values-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.value-card {
+  position: relative;
+  width: 260px;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #003C82;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, padding 0.3s ease;
+  padding: 10px;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  padding: 0;
+}
+
+.value-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  transition: border-radius 0.3s ease;
+}
+
+.value-card:hover img {
+  border-radius: 20px;
+}
+
+.value-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent); */
+  color: #fff;
+  box-sizing: border-box;
+  transition: padding 0.3s ease;
+}
+
+.value-card:hover .value-text {
+  padding: 0;
+}
+
+
+/* team */
+
+.team{
+    margin-top: 150px;
+}
+
+
+
+/* ----------------- better image */
+
+.betterimg{
+    background-color: aqua;
+    background-image: linear-gradient(to top, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/betterlife.jpg');
+    height: 438px;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    /* top: 0; */
+    background-size: cover;
+    
+}
+
+/* ------------------ footer */
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: flex-start; /* or center if needed */
+  padding-top: 20px;
+}
+
+/* Outer container with border and rounded edges */
+.newsletter-input-group {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  width: 379px;
+  height: 48px;
+}
+
+/* Email input styling */
+.newsletter-input {
+  flex: 1;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: #333333;
+  background-color: transparent;
+}
+
+.newsletter-input::placeholder {
+  color: #9ca3af; /* light gray */
+}
+
+/* Button styling */
+.newsletter-button {
+  background-color: #002e6e;
+  color: #ffffff;
+  border: none;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #001f4d;
+}
