@@ -7,17 +7,17 @@ const services = [
   {
     title: "Agricultural Trading",
     desc: "Trading agricultural crops including grains, vegetable oils, sugar, wheat, and more.",
-    image: "/images/wheatfield.jpg"
+    image: "/images/wheatfield.webp"
   },
   {
     title: "Petroleum Supply",
     desc: "Supply and marketing of petroleum derivatives like fuels, oils, lubricants, and chemicals.",
-    image: "/images/goldenoil.jpg"
+    image: "/images/goldenoil.webp"
   },
   {
     title: "Logistics & Distribution",
     desc: "Efficient transportation of petroleum and agricultural goods.",
-    image: "/images/whitebowl.jpg"
+    image: "/images/whitebowl.webp"
   }
 ];
 
@@ -25,12 +25,29 @@ export default function ServiceSlider() {
   return (
     <div className="slider-wrapper">
       <Swiper
-        slidesPerView={3}
-        spaceBetween={-200}
-        grabCursor={true}
-        loop={true}
-        className="mySwiper"
-      >
+  grabCursor={true}
+  loop={false}
+  className="mySwiper"
+  breakpoints={{
+    0: {
+      slidesPerView: 1.2,
+      spaceBetween: 80,
+    },
+    576: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2.2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: -200,
+    }
+  }}
+>
+
         {/* Our Services Slide */}
         <SwiperSlide>
   <div className="slide-inner no-border">

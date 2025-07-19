@@ -1,6 +1,6 @@
 #page-img{
     background-color: aqua;
-    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/aboutbg.jpg');
+    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/aboutbg.webp');
     height: 100vh;
     width: 100%;
     background-position: center;

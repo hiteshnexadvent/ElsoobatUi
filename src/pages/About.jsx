@@ -17,12 +17,12 @@ export default function About() {
         <div className="row">
           <div className="col-lg-6">
             <div className="about-card">
-              <img src="/images/abouttop1.jpg" alt="Quality" />
+              <img src="/images/abouttop1.webp" alt="Quality" />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="about-card">
-              <img src="/images/abouttop2.jpg" alt="Professionalism" />
+              <img src="/images/abouttop2.webp" alt="Professionalism" />
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export default function About() {
             }}
           >
             <img
-              src="/images/vision.png"
+              src="/images/vision.webp"
               alt="vision"
               style={{ width: "100%", height: "100%", borderRadius: "20px" }}
             />
@@ -189,7 +189,7 @@ export default function About() {
             }}
           >
             <img
-              src="/images/mission.png"
+              src="/images/mission.webp"
               alt="mission"
               style={{ width: "100%", height: "100%", borderRadius: "20px" }}
             />
@@ -250,7 +250,7 @@ export default function About() {
             }}
           >
             <div class="aboutvalue-card">
-              <img src="/images/whitebowl.jpg" alt="Quality" />
+              <img src="/images/whitebowl.webp" alt="Quality" />
               <div className="aboutvalue-text">
                 <h3>Quality</h3>
                 <p>
@@ -280,7 +280,7 @@ export default function About() {
             }}
           >
             <div className="aboutvalue-card">
-              <img src="/images/abstract.jpg" alt="Quality" />
+              <img src="/images/abstract.webp" alt="Quality" />
               <div className="aboutvalue-text">
                 <h3>Professionalism</h3>
                 <p>
@@ -354,7 +354,7 @@ export default function About() {
             }}
           >
             <div className="aboutvalue-card">
-              <img src="/images/business.jpg" alt="Quality" />
+              <img src="/images/business.webp" alt="Quality" />
               <div className="aboutvalue-text">
                 <h3>Innovation</h3>
                 <p>Continuously innovating in operations and products.</p>
@@ -376,7 +376,7 @@ export default function About() {
             }}
           >
             <div className="aboutvalue-card">
-              <img src="/images/handshake.jpg" alt="Quality" />
+              <img src="/images/handshake.webp" alt="Quality" />
               <div className="aboutvalue-text">
                 <h3>Transparency</h3>
                 <p>Maintaining integrity in all business relationships.</p>
@@ -415,25 +415,25 @@ export default function About() {
           <h2 style={{ fontSize: "40px", fontWeight: "700" }}>Why Choose Us</h2>
           <div class="aboutchoose-container">
             <div class="aboutchoose-card">
-              <img src="/images/choose1.jpg" alt="Quality" />
+              <img src="/images/choose1.webp" alt="Quality" />
               <div class="aboutchoose-text">
                 <h3>Experience Team</h3>
               </div>
             </div>
             <div class="aboutchoose-card">
-              <img src="/images/choose2.png" alt="Professionalism" />
+              <img src="/images/choose2.webp" alt="Professionalism" />
               <div class="aboutchoose-text">
                 <h3>Environmental Compliance</h3>
               </div>
             </div>
             <div class="aboutchoose-card">
-              <img src="/images/choose3.png" alt="Innovation" />
+              <img src="/images/choose3.webp" alt="Innovation" />
               <div class="aboutchoose-text">
                 <h3>Customer-Centric</h3>
               </div>
             </div>
             <div class="aboutchoose-card">
-              <img src="/images/choose4.png" alt="Transparency" />
+              <img src="/images/choose4.webp" alt="Transparency" />
               <div class="aboutchoose-text">
                 <h3>Comprehensive Services</h3>
               </div>
@@ -458,7 +458,7 @@ export default function About() {
           <div className="col-lg-2"></div>
           <div className="col-lg-8">
             <div className="presence-card">
-              <img src="/images/presence.jpg" alt="Quality" />
+              <img src="/images/presence.webp" alt="Quality" />
             </div>
           </div>
           <div className="col-lg-2"></div>

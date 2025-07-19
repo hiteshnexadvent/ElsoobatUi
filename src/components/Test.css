@@ -3,7 +3,6 @@
   padding: 60px 20px;
   background-color: #fff;
   margin-top: 150px;
-
 }
 
 #testimonial-slider .testimonial-wrapper h2 {
@@ -86,6 +85,7 @@
   background-color: #f1f8ff;
   border: 2px solid #003C82;
   border-radius: 16px;
+  margin-top: 10px;
   padding: 20px;
 }
 

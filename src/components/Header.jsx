@@ -15,36 +15,73 @@ export default function Header() {
     if (pathname === '/') return <BackgroundImage />;
     if (pathname === '/about') return <AboutBgImage />;
     if (pathname === '/contact') return <ContactBgImg />;
-    if (pathname === '/petrol') return <PetrolBgImg />;
-    return null; // fallback if none match
+    if (pathname === '/service') return <PetrolBgImg />;
+    return null;
   };
 
   return (
       <div>
           
-          <div className="container-fluid" id='navbar'>
-              <div className="row" style={{height:'auto',backgroundColor:'transparent'}} >
-                  <div className="col-lg-3 d-flex">
-                      <img src="/images/logo.png" alt="" style={{ width: '56px', height: '58px',marginLeft:'167px' }} />
-                      <p style={{fontWeight:'700',fontSize:'22px',color:'white',paddingTop:'15px'}}>ELSOOBAT</p>
-                  </div>
-                  <div className="col-lg-3"></div>
-                  <div className="col-lg-6" style={{border:'1px solid #FFFFFF',width:'465px',height:'43px',borderRadius:'20px',paddingTop:'10px'}}>
-                      <ul style={{ listStyle: 'none', display: 'flex', color: 'white', fontSize: '14px', fontWeight: '400' }}>
-                          <Link to='/' style={{textDecoration:'none',color:'white'}}>Home</Link>
-                          <Link to='/about' style={{textDecoration:'none',color:'white'}}><li style={{marginLeft:'30px'}}>About</li></Link>
-                          <select name="" id="" style={{backgroundColor:'transparent',color:'white',border:'none',marginLeft:'30px'}}>
-                              <option value="">Services</option>
-                          </select>
-                          <li style={{marginLeft:'30px'}}>Products</li>
-                          <li style={{marginLeft:'30px'}}>Contact</li>
-                      </ul>
-                  </div>
-              </div>
-              
-          </div>
-          {renderBackground()}
+          <div id="navbar">
 
+              <nav class="navbar navbar-expand-lg" style={{backgroundColor:'transparent'}}>
+                <div class="container-fluid">
+                      <a class="navbar-brand" href="/">
+                          
+                        <div className="logo d-flex">
+                      <img src="/images/logo.png" alt="" style={{ width: '56px', height: '58px',marginLeft:'167px' }} className='logo img-fluid' />
+                      <p style={{fontWeight:'700',fontSize:'22px',color:'white',paddingTop:'15px'}}>ELSOOBAT</p>
+                      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style={{border:'1px solid white',borderRadius:'30px',padding:'5px 40px',marginRight:'150px'}}>
+        <li class="nav-item">
+                                  <a class="nav-link text-light me-3" href="/" style={{ fontSize: '14px' }}>Home</a>
+                              </li>
+                              <li class="nav-item">
+          <a class="nav-link text-light me-3" href="/about" style={{ fontSize: '14px' }}>About</a>
+                              </li>
+
+                                      {/* <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"/></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> */}
+
+                              <li class="nav-item">
+          <a class="nav-link text-light me-3" href="/service" style={{ fontSize: '14px' }}>Services</a>
+                              </li>
+                              <li class="nav-item">
+          <a class="nav-link text-light me-3" href="#" style={{ fontSize: '14px' }}>Products</a>
+                              </li>
+                              <li class="nav-item">
+          <a class="nav-link text-light me-3" href="#" style={{ fontSize: '14px' }}>Contact</a>
+        </li>
+
+       
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+          </div>
+
+          {renderBackground()}
+          
+
+          
     </div>
   )
 }
