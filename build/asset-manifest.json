@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.64e721f6.css",
-    "main.js": "/static/js/main.b9723afe.js",
+    "main.css": "/static/css/main.aedbf6b2.css",
+    "main.js": "/static/js/main.6e2dff05.js",
     "static/js/453.94f8bcd5.chunk.js": "/static/js/453.94f8bcd5.chunk.js",
-    "static/media/betterlife.jpg": "/static/media/betterlife.224811a7e20be2833d6a.jpg",
-    "static/media/aboutbg.jpg": "/static/media/aboutbg.47c0397fb955758b3823.jpg",
-    "static/media/bgimg.jpg": "/static/media/bgimg.5a4d293a68ad743341fd.jpg",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/betterlife.webp": "/static/media/betterlife.48630c82697d9282e452.webp",
+    "static/media/bgimg.webp": "/static/media/bgimg.bbda9680a51f8dd9ce9b.webp",
+    "static/media/aboutbg.webp": "/static/media/aboutbg.1801c266c6d7acc11c09.webp",
     "index.html": "/index.html",
-    "main.64e721f6.css.map": "/static/css/main.64e721f6.css.map",
-    "main.b9723afe.js.map": "/static/js/main.b9723afe.js.map",
+    "main.aedbf6b2.css.map": "/static/css/main.aedbf6b2.css.map",
+    "main.6e2dff05.js.map": "/static/js/main.6e2dff05.js.map",
     "453.94f8bcd5.chunk.js.map": "/static/js/453.94f8bcd5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64e721f6.css",
-    "static/js/main.b9723afe.js"
+    "static/css/main.aedbf6b2.css",
+    "static/js/main.6e2dff05.js"
   ]
 }
