@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Test.css'; // make sure your scoped CSS is here
+import './Test.css'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const testimonials = [
   {
@@ -34,9 +36,21 @@ const testimonials = [
 ];
 
 export default function TestimonialSlider() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
+    
     <div id="testimonial-slider" className="testimonial-wrapper">
-      <h2 style={{marginTop:'150px',fontSize:'40px',fontWeight:'700'}}>Our Happy Clients</h2>
+      <h2
+        style={{ marginTop: '150px', fontSize: '40px', fontWeight: '700' }}
+        data-aos="fade-up"
+      >
+        Our Happy Clients
+      </h2>
+
       <Swiper
         modules={[Navigation]}
         navigation
@@ -53,7 +67,11 @@ export default function TestimonialSlider() {
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="testimonial-card">
+            <div
+              className="testimonial-card"
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 100} // Stagger animation
+            >
               <div className="testimonial-bubble">
                 <p>{item.text}</p>
               </div>
@@ -64,5 +82,6 @@ export default function TestimonialSlider() {
         ))}
       </Swiper>
     </div>
+
   );
 }

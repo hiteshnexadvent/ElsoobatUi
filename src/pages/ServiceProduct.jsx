@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const products = [
   {
@@ -9,7 +11,7 @@ const products = [
   },
   {
     title: 'Lubricants',
-    desc: 'Engineered lubricants that minimize wear and tear, reduce friction, and optimize the performance Advanced lubricating solutions for automotive, marine, and industrial applications with superior protection.of machinery and engines.',
+    desc: 'Advanced lubricating solutions for automotive, marine, and industrial applications with superior protection.',
     image: '/images/service2.webp',
     className: 'box2',
   },
@@ -25,16 +27,26 @@ const products = [
     image: '/images/service4.webp',
     className: 'box4',
   }
-];
-
+]
 
 export default function ServiceProduct() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true })
+  }, [])
+
   return (
-      <div className="container">
-      <h2 style={{ fontSize: '40px', fontWeight: '700',marginTop:'150px' }}>Wide Range of Petroleum Derivatives</h2>
+    <div className="container">
+      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px' }}>
+        Wide Range of Petroleum Derivatives
+      </h2>
       <div className="products">
         {products.map((product, index) => (
-          <div className={product.className} key={index}>
+          <div
+            className={product.className}
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
             <div className="image-wrapper">
               <img src={product.image} alt={product.title} />
               <div className="text-content">

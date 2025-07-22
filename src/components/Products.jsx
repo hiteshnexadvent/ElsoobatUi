@@ -1,5 +1,8 @@
 import React from 'react';
 import './Style1.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const products = [
   {
@@ -29,11 +32,12 @@ const products = [
 ];
 
 export default function Products() {
-  
   return (
     <div className="container">
-      <h2 style={{ fontSize: '40px', fontWeight: '700',marginTop:'150px' }}>Our Products</h2>
-      <div className="products">
+      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px' }}>Our Products</h2>
+
+      {/* Desktop Layout */}
+      <div className="products desktop-view">
         {products.map((product, index) => (
           <div className={product.className} key={index}>
             <div className="image-wrapper">
@@ -45,6 +49,31 @@ export default function Products() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Mobile Swiper Slider */}
+      <div className="products-slider mobile-view">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1.2}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.5,
+            },
+          }}
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <div className={`image-wrapper ${product.className}`}>
+                <img src={product.image} alt={product.title} />
+                <div className="text-content">
+                  <h3>{product.title}</h3>
+                  <p>{product.desc}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

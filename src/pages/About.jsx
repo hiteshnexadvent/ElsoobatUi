@@ -2,31 +2,50 @@ import React from "react";
 import Header from "../components/Header";
 import Team from "./Team";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function About() {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, []);
+  
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, 
+    once: true,     
+  });
+}, []);
+
+
   return (
     <div>
       <Header></Header>
 
       <div className="container" style={{ marginTop: "150px" }}>
         <h2
-          style={{ fontSize: "40px", fontWeight: "700", marginBottom: "70px" }}
-        >
-          About Elsoobat
-        </h2>
+  data-aos="fade-up"
+  style={{ fontSize: "40px", fontWeight: "700", marginBottom: "70px" }}
+>
+  About Elsoobat
+</h2>
+
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-right">
             <div className="about-card">
               <img src="/images/abouttop1.webp" alt="Quality" />
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="about-card">
+            <div className="about-card" data-aos="fade-left">
               <img src="/images/abouttop2.webp" alt="Professionalism" />
             </div>
           </div>
 
-          <div style={{ textAlign: "start", padding: "70px" }}>
+          <div style={{ textAlign: "start", padding: "70px" }} data-aos="fade-up">
             <p style={{ fontSize: "20px" }}>
               Established on April 24, 2019, under the visionary leadership of
               Chairman Hisham Hassan Mohammed Ahmed Ali, Elsoobat is a proud
@@ -53,7 +72,9 @@ export default function About() {
           </div>
         </div>
 
-        <h2
+      </div>
+
+      <h2
           style={{
             fontSize: "40px",
             fontWeight: "700",
@@ -63,6 +84,10 @@ export default function About() {
         >
           Our Achievements
         </h2>
+      
+      <div className="container-fluid" style={{backgroundColor:'#F9FEFF'}}>
+
+        
 
         <div className="row">
           <div className="achievements-section">
@@ -91,6 +116,12 @@ export default function About() {
           </div>
         </div>
 
+      </div>
+      
+      <div className="container">
+
+
+
         <h2
           style={{
             fontSize: "40px",
@@ -112,6 +143,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "25px",
             }}
+            data-aos="fade-right"
           >
             <img
               src="/images/vision.webp"
@@ -128,6 +160,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "70px 30px",
             }}
+            data-aos="fade-left"
           >
             <p style={{ fontSize: "20px", textAlign: "start" }}>
               We aim to be recognized as leaders in the trading industry of
@@ -196,6 +229,8 @@ export default function About() {
           </div>
         </div>
 
+        </div>
+        
         {/* our values */}
 
         <h2
@@ -207,7 +242,9 @@ export default function About() {
           }}
         >
           Our Values
-        </h2>
+      </h2>
+      
+      <div className="container-fluid" style={{backgroundColor:'#F9FEFF',paddingBottom:'50px',paddingTop:'50px'}}>
 
         {/* box1 */}
 
@@ -227,6 +264,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "70px 30px",
             }}
+            data-aos="fade-right"
           >
             <p style={{ fontSize: "20px", textAlign: "start" }}>
               At Elsoobat, we strive to understand and fulfill the unique needs
@@ -248,6 +286,7 @@ export default function About() {
               border: "1px solid #003C82",
               borderRadius: "20px",
             }}
+            data-aos="fade-left"
           >
             <div class="aboutvalue-card">
               <img src="/images/whitebowl.webp" alt="Quality" />
@@ -278,6 +317,7 @@ export default function About() {
               border: "1px solid #003C82",
               borderRadius: "20px",
             }}
+            data-aos="fade-right"
           >
             <div className="aboutvalue-card">
               <img src="/images/abstract.webp" alt="Quality" />
@@ -299,6 +339,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "70px 30px",
             }}
+            data-aos="fade-left"
           >
             <p style={{ fontSize: "20px", textAlign: "start" }}>
               At Elsoobat, professionalism is the cornerstone of everything we
@@ -331,6 +372,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "70px 30px",
             }}
+            data-aos="fade-right"
           >
             <p style={{ fontSize: "20px", textAlign: "start" }}>
               At Elsoobat, innovation is at the heart of our growth and success.
@@ -352,6 +394,7 @@ export default function About() {
               border: "1px solid #003C82",
               borderRadius: "20px",
             }}
+            data-aos="fade-left"
           >
             <div className="aboutvalue-card">
               <img src="/images/business.webp" alt="Quality" />
@@ -374,6 +417,7 @@ export default function About() {
               border: "1px solid #003C82",
               borderRadius: "20px",
             }}
+            data-aos="fade-right"
           >
             <div className="aboutvalue-card">
               <img src="/images/handshake.webp" alt="Quality" />
@@ -393,6 +437,7 @@ export default function About() {
               borderRadius: "20px",
               padding: "70px 30px",
             }}
+            data-aos="fade-left"
           >
             <p style={{ fontSize: "20px", textAlign: "start" }}>
               At Elsoobat, transparency is fundamental to the way we conduct
@@ -414,25 +459,26 @@ export default function About() {
         <div className="row" style={{ marginTop: "150px" }}>
           <h2 style={{ fontSize: "40px", fontWeight: "700" }}>Why Choose Us</h2>
           <div class="aboutchoose-container">
-            <div class="aboutchoose-card">
+
+            <div class="aboutchoose-card" data-aos="zoom-in-up">
               <img src="/images/choose1.webp" alt="Quality" />
               <div class="aboutchoose-text">
                 <h3>Experience Team</h3>
               </div>
             </div>
-            <div class="aboutchoose-card">
+            <div class="aboutchoose-card" data-aos="zoom-in-up">
               <img src="/images/choose2.webp" alt="Professionalism" />
               <div class="aboutchoose-text">
                 <h3>Environmental Compliance</h3>
               </div>
             </div>
-            <div class="aboutchoose-card">
+            <div class="aboutchoose-card" data-aos="zoom-in-up">
               <img src="/images/choose3.webp" alt="Innovation" />
               <div class="aboutchoose-text">
                 <h3>Customer-Centric</h3>
               </div>
             </div>
-            <div class="aboutchoose-card">
+            <div class="aboutchoose-card" data-aos="zoom-in-up">
               <img src="/images/choose4.webp" alt="Transparency" />
               <div class="aboutchoose-text">
                 <h3>Comprehensive Services</h3>
@@ -442,7 +488,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container-fluid" style={{backgroundColor:'#F9FEFF',paddingBottom:'50px'}}>
         <h2
           style={{
             fontSize: "40px",
@@ -457,7 +503,7 @@ export default function About() {
         <div className="row">
           <div className="col-lg-2"></div>
           <div className="col-lg-8">
-            <div className="presence-card">
+            <div className="presence-card" data-aos="fade-up">
               <img src="/images/presence.webp" alt="Quality" />
             </div>
           </div>
