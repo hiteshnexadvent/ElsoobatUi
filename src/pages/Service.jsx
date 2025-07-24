@@ -4,6 +4,7 @@ import ServiceProduct from './ServiceProduct'
 import Footer from '../components/Footer'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Agriculture from './Agriculture'
 
 
 export default function Service() {
@@ -25,31 +26,33 @@ export default function Service() {
 
           <ServiceProduct></ServiceProduct>
 
+          <Agriculture></Agriculture>
+
           {/* high performance */}
 
-          <div className="container-fluid" style={{backgroundColor:'#F9FEFF',paddingBottom:'50px'}}>
+          <div className="container-fluid high-performance" style={{backgroundColor:'#F9FEFF',paddingBottom:'50px'}}>
               
-            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px'}}>High-Performance Fuel Solutions</h2>
+            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px',paddingTop:'50px'}}>High-Performance Fuel Solutions</h2>
 
 
               <div className="row">
                   
                   <div className="col-lg-1"></div>
                   <div className="col-lg-1"></div>
-                  <div className="col-lg-4" style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
-                      <div style={{display:'flex',justifyContent:'space-evenly',alignItems:'center'}}>
-                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Enhanced Combustion</p>
+                  <div className="col-lg-4 col-12 hp" style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
+                      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Efficient Combustion</p>
                         <img src="/images/ser1.png" alt="" style={{height:'121px',width:'100px'}}/>
                       </div>
-                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Optimized fuel formulations for cleaner burning and improved <br /> energy output.</p>
+                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Fuel blends engineered for cleaner ignition, reduced emissions, and improved fuel economy across applications.</p>
                   </div>
-                  <div className="col-lg-4"  style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
+                  <div className="col-lg-4 col-12 hp"  style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
                   
-                      <div style={{display:'flex',justifyContent:'space-evenly',alignItems:'center'}}>
-                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Eco-Friendly Options</p>
+                      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Sustainable Choices</p>
                         <img src="/images/ser2.png" alt="" style={{height:'121px',width:'100px'}}/>
                       </div>
-                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Sustainable fuel alternatives with reduced environmental impact <br /> and lower carbon footprint.</p>
+                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Eco-conscious fuel options designed to minimize environmental impact and support cleaner energy goals.</p>
                       
                   </div>
                   <div className="col-lg-1"></div>
@@ -59,24 +62,24 @@ export default function Service() {
 
               {/* row 2 */}
 
-              <div className="row" style={{marginTop:'50px'}}>
+              <div className="row" style={{marginTop:'10px'}}>
                   
                   <div className="col-lg-1"></div>
                   <div className="col-lg-1"></div>
-                  <div className="col-lg-4" style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
-                      <div style={{display:'flex',justifyContent:'space-evenly',alignItems:'center'}}>
-                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Superior Performance</p>
+                  <div className="col-lg-4 col-12 hp" style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
+                      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Engine Efficiency</p>
                         <img src="/images/ser3.png" alt="" style={{height:'121px',width:'100px'}}/>
                       </div>
-                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>High-octane fuels engineered for <br /> maximum power, efficiency, and <br /> engine longevity.</p>
+                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Formulated to enhance engine output, boost performance, and extend operational lifespan under demanding conditions.</p>
                   </div>
-                  <div className="col-lg-4"  style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
+                  <div className="col-lg-4 col-12 hp"  style={{border:'1px solid #003C82',padding:'15px',borderRadius:'25px',marginRight:'20px'}}>
                   
-                      <div style={{display:'flex',justifyContent:'space-evenly',alignItems:'center'}}>
-                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Engine Protection</p>
+                      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+                        <p style={{fontSize:'25px',fontWeight:'600',textAlign:'start'}}>Protective Additives </p>
                         <img src="/images/ser4.png" alt="" style={{height:'121px',width:'100px'}}/>
                       </div>
-                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Advanced additives that protect <br />against corrosion, deposits, and <br /> wear.</p>
+                      <p style={{fontSize:'20px',fontWeight:'600',textAlign:'start'}}>Infused with advanced additives to prevent corrosion, reduce buildup, and maintain optimal engine health.</p>
                       
                   </div>
                   <div className="col-lg-1"></div>
@@ -90,24 +93,27 @@ export default function Service() {
           {/* safe handling */}
 
 
-          <div className="container">
+          <div className="container safe-handling">
               
-            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px'}}>Safe Handling & Storage Systems</h2>
+            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px',color:'#003C82'}}>Safe Handling & Storage Systems</h2>
 
 
-              <div className="row">
+              <div className="row safe">
                 
                   <div className="col-lg-2"></div>
                   <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
                       
-                      <div style={{display:'flex'}}>
+                  <div style={{ display: 'flex' }} className='col1'>
                           
-                          <div style={{width:'70%'}}>
+                          <div className="text-block">
                           <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',color:'#003C82' }}>1. Advance Safety Protocol</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>Rigorous safety standards and procedures <br /> compliant with international regulations, ensuring maximum protection for personnel and environment.</p>
+                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>We follow strict, internationally recognized safety procedures to protect people, property, and the environment at all times.</p>
                           </div>
-                          
-                          <img src="/images/safe1.webp" alt="safe" style={{width:'237px',height:'213px',borderRadius:'14px'}}/>
+                          <div className="glass-effect-wrapper">
+                          <img src="/images/safe1.webp" alt="safe" className="glass-img" />
+                          <div className="glass-overlay"></div>
+                          </div>
+
 
                       </div>
 
@@ -120,20 +126,23 @@ export default function Service() {
 
               {/* row 2 */}
 
-              <div className="row mt-5">
+              <div className="row mt-5 safe">
                 
                   <div className="col-lg-2"></div>
-                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }}  data-aos="fade-up"
-      data-aos-delay="100">
+                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }}  data-aos="fade-up" data-aos-delay="100">
                       
-                      <div style={{display:'flex'}}>
+                      <div style={{display:'flex'}} className='col1'>
                           
-                          <div style={{width:'70%'}}>
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',color:'#003C82' }}>2. Modern Storage Facilities</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>State-of-the-art storage tanks and terminals <br /> equipped with advanced monitoring systems  and emergency  response capabilities.</p>
+                          <div className="text-block">
+                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',color:'#003C82' }}>2. Modern Storage Infrastructure</p>
+                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>Our facilities are equipped with cutting-edge storage systems, real-time monitoring, and emergency control mechanisms to ensure secure containment.</p>
                           </div>
                           
-                          <img src="/images/safe2.webp" alt="safe" style={{width:'237px',height:'213px',borderRadius:'14px'}}/>
+                          <div className="glass-effect-wrapper">
+  <img src="/images/safe2.webp" alt="safe" className="glass-img" />
+  <div className="glass-overlay"></div>
+</div>
+
 
                       </div>
 
@@ -147,19 +156,23 @@ export default function Service() {
 
               {/* row 3 */}
 
-              <div className="row mt-5">
+              <div className="row mt-5 safe2">
                 
                   <div className="col-lg-2"></div>
                   <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up"
       data-aos-delay="200">
                       
-                      <div style={{display:'flex'}}>
+                      <div style={{display:'flex'}} className='col2'>
 
-                          <img src="/images/safe3.webp" alt="safe" style={{width:'237px',height:'213px',borderRadius:'14px'}}/>
+                          <div className="glass-effect-wrapper">
+  <img src="/images/safe3.webp" alt="safe" className="glass-img" />
+  <div className="glass-overlay"></div>
+</div>
+
                           
-                          <div style={{width:'70%'}}>
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',padding:'0 30px',color:'#003C82' }}>3. Quality Monitoring</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',padding:'0 30px',textAlign:'start'}}>Continuous quality control and testing procedures to maintain product integrity and safety throughout the supply chain.</p>
+                          <div className="text-block">
+                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',padding:'0 30px',color:'#003C82' }}>3. Quality Assurance Systems</p>
+                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',padding:'0 30px',textAlign:'start'}}>Continuous testing and quality control are implemented at every step to preserve product integrity and meet industry benchmarks.</p>
                           </div>
                           
                           
@@ -175,18 +188,22 @@ export default function Service() {
 
               {/* row 4 */}
 
-              <div className="row mt-5">
+              <div className="row mt-5 safe2">
                 
                   <div className="col-lg-2"></div>
                   <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up" data-aos-delay="300">
                       
-                      <div style={{ display: 'flex' }}>
+                      <div style={{ display: 'flex' }} className='col2'>
                           
-                          <img src="/images/safe4.webp" alt="safe" style={{width:'237px',height:'213px',borderRadius:'14px'}}/>
+                         <div className="glass-effect-wrapper">
+  <img src="/images/safe4.webp" alt="safe" className="glass-img" />
+  <div className="glass-overlay"></div>
+</div>
+
                           
-                          <div style={{width:'70%'}}>
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',padding:'0 30px',color:'#003C82' }}>4. Environmental Compliance</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start',padding:'0 30px'}}>Strict adherence to environmental regulations with sustainable practices and eco-friendly handling procedures.</p>
+                          <div className="text-block">
+                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'5px',textAlign:'start',padding:'0 13px',color:'#003C82' }}>4. Environmental Responsibility</p>
+                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start',padding:'0 30px'}}>We maintain full compliance with environmental regulations and adopt eco-friendly handling practices to reduce operational impact.</p>
                           </div>
                           
                           
@@ -203,7 +220,7 @@ export default function Service() {
 
           </div>
 
-          <div className="container-fluid" style={{ marginBottom: '100px', backgroundColor: '#F9FEFF', paddingBottom: '50px' }}>
+          {/* <div className="container-fluid" style={{ marginBottom: '100px', backgroundColor: '#F9FEFF', paddingBottom: '50px' }}>
               
               <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px', marginBottom: '50px' }}>Strategic Distribution Network</h2>
               <p style={{marginBottom:'50px',fontSize:'18px',fontWeight:'400'}}>Efficient logistics and distribution systems ensuring timely delivery <br /> of petroleum products across regional and global markets.</p>
@@ -218,9 +235,11 @@ export default function Service() {
                   </div>
                   <div className="col-3"></div>
              </div>
-          </div>
+          </div> */}
 
-          <Footer></Footer>
+      <div className="footer" style={{marginTop:'100px'}}>
+        <Footer></Footer>
+          </div>
 
 
     </div>

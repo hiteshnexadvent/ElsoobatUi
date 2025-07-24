@@ -6,21 +6,22 @@ import "swiper/css/navigation";
 import "./Style1.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     title: "Agricultural Trading",
-    desc: "Trading agricultural crops including grains, vegetable oils, sugar, wheat, and more.",
+    desc: "Premium grains, oils, wheat, and sugar sourced and delivered with reliability",
     image: "/images/wheatfield.webp"
   },
   {
     title: "Petroleum Supply",
-    desc: "Supply and marketing of petroleum derivatives like fuels, oils, lubricants, and chemicals.",
+    desc: "Supplying fuels, lubricants, and chemicals tailored for industrial performance.",
     image: "/images/goldenoil.webp"
   },
   {
     title: "Logistics & Distribution",
-    desc: "Efficient transportation of petroleum and agricultural goods.",
+    desc: "Efficient transport and delivery of agri and petroleum products across borders.",
     image: "/images/whitebowl.webp"
   }
 ];
@@ -89,16 +90,12 @@ export default function ServiceSlider() {
         }}
       >
         {/* Our Services Slide */}
-        {/* Our Services Slide */}
 <SwiperSlide>
   <div className="slide-inner no-border" data-aos="fade-right">
     <div className="text-only-slide">
       <h2 className="plain-title">Our Services</h2>
       <p className="plain-desc">
-        We provide comprehensive solutions for petroleum derivatives and agricultural products,
-        tailored to meet the evolving needs of industries and businesses. From high-performance
-        oils, lubricants, and fuels to premium-quality grains and edible oils, our product range
-        is designed to ensure reliability.
+        We deliver end-to-end trading solutions across the energy and agriculture sectors — tailored to meet the demands of today’s fast-moving markets. Whether it’s high-grade fuels and lubricants, or premium grains and edible oils, Elsoobat ensures every product is delivered with precision, compliance, and reliability.
       </p>
     </div>
   </div>
@@ -119,7 +116,7 @@ export default function ServiceSlider() {
             <div className="card-content">
               <p className="desc">{item.desc}</p>
               <h3 className="title">{item.title}</h3>
-              <button className="explore-btn">Explore Now</button>
+              <Link to='/service'><button className="explore-btn">Explore Now</button></Link>
             </div>
           </div>
         </div>

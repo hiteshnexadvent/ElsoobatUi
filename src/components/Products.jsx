@@ -7,25 +7,25 @@ import 'swiper/css/pagination';
 const products = [
   {
     title: 'Fuel',
-    desc: 'Reliable fuels for transport and industrial needs, ensuring efficiency and energy output.',
-    image: '/images/fuel.webp',
+    desc: 'High-quality fuels for transportation and industry — optimized for performance and energy efficiency.',
+    image: '/images/fuel.jpg',
     className: 'box1',
   },
   {
     title: 'Lubricants',
-    desc: 'Engineered lubricants that reduce friction, wear and tear, and optimize machinery performance.',
-    image: '/images/lubricant.webp',
+    desc: 'Advanced lubricants engineered to reduce friction, extend equipment life, and enhance machinery output.',
+    image: '/images/lubricant.jpg',
     className: 'box2',
   },
   {
     title: 'Wheat',
-    desc: 'Premium wheat sourced for baking and milling industries, offering top quality and consistency.',
-    image: '/images/wheat.webp',
+    desc: 'Top-grade wheat sourced for baking, milling, and processing — ensuring quality and consistency in every batch.',
+    image: '/images/wheat.jpg',
     className: 'box3',
   },
   {
     title: 'Vegetable Oil',
-    desc: 'Refined vegetable oils ideal for cooking and food production, offering purity and nutrition.',
+    desc: 'Refined edible oils ideal for cooking and food production — offering purity, stability, and nutritional value.',
     image: '/images/vegetable.webp',
     className: 'box4',
   }
@@ -33,8 +33,8 @@ const products = [
 
 export default function Products() {
   return (
-    <div className="container">
-      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px' }}>Our Products</h2>
+    <div className="container products-top">
+      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px',color:'#003C82' }}>Our Products</h2>
 
       {/* Desktop Layout */}
       <div className="products desktop-view">

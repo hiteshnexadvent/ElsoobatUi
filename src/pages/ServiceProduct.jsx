@@ -1,29 +1,32 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const products = [
   {
     title: 'Premium Fuels',
-    desc: 'High-quality gasoline, diesel, and aviation fuels meeting international standards for optimal performance and efficiency.',
+    desc: 'Gasoline, diesel, and other refined fuels that meet international performance and safety standards.',
     image: '/images/service1.webp',
     className: 'box1',
   },
   {
     title: 'Lubricants',
-    desc: 'Advanced lubricating solutions for automotive, marine, and industrial applications with superior protection.',
+    desc: 'High-performance lubricants for automotive, industrial, and marine applications — ensuring operational efficiency.',
     image: '/images/service2.webp',
     className: 'box2',
   },
   {
     title: 'Industrial Oils',
-    desc: 'Complete range of industrial oils including hydraulic fluids, transformer oils, and heat transfer fluids.',
+    desc: 'Hydraulic fluids, transformer oils, and heat transfer oils tailored for heavy-duty industrial use.',
     image: '/images/serice3.webp',
     className: 'box3',
   },
   {
     title: 'Speciality Chemicals',
-    desc: 'Custom chemical solutions and additives for enhanced performance and environmental compliance.',
+    desc: 'Select petroleum-based chemicals for various industrial and energy applications.',
     image: '/images/service4.webp',
     className: 'box4',
   }
@@ -35,18 +38,14 @@ export default function ServiceProduct() {
   }, [])
 
   return (
-    <div className="container">
-      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px' }}>
-        Wide Range of Petroleum Derivatives
+    <div className="container service-product">
+      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px',color:'#003C82' }}>
+        Petroleum Derivatives
       </h2>
-      <div className="products">
+      {/* Desktop Layout */}
+      <div className="products desktop-view">
         {products.map((product, index) => (
-          <div
-            className={product.className}
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
+          <div className={product.className} key={index}>
             <div className="image-wrapper">
               <img src={product.image} alt={product.title} />
               <div className="text-content">
@@ -57,6 +56,32 @@ export default function ServiceProduct() {
           </div>
         ))}
       </div>
+
+      {/* Mobile Swiper Slider */}
+      <div className="products-slider mobile-view">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1.2}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.5,
+            },
+          }}
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <div className={`image-wrapper ${product.className}`}>
+                <img src={product.image} alt={product.title} />
+                <div className="text-content">
+                  <h3>{product.title}</h3>
+                  <p>{product.desc}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
     </div>
   )
 }

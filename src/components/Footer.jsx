@@ -9,7 +9,6 @@ export default function Footer() {
     <div>
       {/* ------------------- better life */}
       <BetterBgImg />
-      {/* ------------------- better life */}
 
       {/* ------------------- footer */}
       <div className="footer" style={{ width: '100%', backgroundColor: '#003C82' }}>
@@ -34,7 +33,7 @@ export default function Footer() {
             </div>
 
             {/* Newsletter */}
-            <div className="col-lg-4 col-md-6 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
+            <div className="col-lg-4 col-md-7 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>Take a ride with us</p>
               <p style={{ fontSize: '14px', color: '#FFFFFF', textAlign: 'start' }}>
                 Subscribe to be the first to know <br />
@@ -71,7 +70,7 @@ export default function Footer() {
             </div>
 
             {/* About */}
-            <div className="col-lg-2 col-md-5 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
+            <div className="col-lg-2 col-md-4 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>About</p>
               <div style={{ textAlign: 'left', color: '#FFFFFF', fontSize: '14px', lineHeight: '25px' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -84,7 +83,7 @@ export default function Footer() {
             </div>
 
             {/* Support */}
-            <div className="col-lg-2 col-md-5 col-12 mb-4 p-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
+            <div className="col-lg-2 col-md-7 col-12 mb-4 p-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>Support</p>
               <div style={{ textAlign: 'left', color: '#FFFFFF', fontSize: '14px', lineHeight: '25px' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>

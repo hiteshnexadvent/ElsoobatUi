@@ -66,6 +66,7 @@
   align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
+  color: #003C82;
 }
 
 .faq-image-box {
@@ -229,4 +230,44 @@
   100% {
     left: 125%;
   }
+}
+
+@media (min-width: 370px) and (max-width: 490px) {
+
+  .main-contact p{
+    padding: 0 !important;
+  }
+
+  .contact-form{
+    margin-top: 0px !important;
+  }
+
+  .getintouch{
+    padding: 10px !important;
+  }
+
+  .getintouch h2{
+    font-size: 35px !important;
+  }
+
+  .getintouch p{
+    font-size: 20px !important;
+    
+  }
+
+  .contact-details{
+    padding: 0 !important;
+  }
+
+  .contact-details h2{
+    font-size: 25px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+
+  .map{
+    width: 100%;
+    margin-left: 2px !important;
+  }
+
 }

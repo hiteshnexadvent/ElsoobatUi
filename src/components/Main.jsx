@@ -12,6 +12,7 @@ import Team from "../pages/Team";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Marquee from "./Marquee";
 
 export default function Main() {
 
@@ -30,11 +31,13 @@ export default function Main() {
 
   return (
     <div>
+
+      <Marquee></Marquee>
       
       {/* ------------------ about */}
 
 <div className="container gx-0">
-  <div className="row gx-0" style={{ marginTop: "150px", marginBottom: "100px" }}>
+  <div className="row gx-0 about-top" style={{ marginTop: "150px", marginBottom: "100px" }}>
     
     {/* LEFT COLUMN */}
     <div
@@ -42,42 +45,40 @@ export default function Main() {
       data-aos="fade-right"
     >
       <div style={{ paddingRight: '30px' }}>
-        <h2 style={{ fontSize: '40px', fontWeight: '700', textAlign: 'start' }}>
+        <h2 style={{ fontSize: '40px', fontWeight: '700', textAlign: 'start', color: '#003C82' }}>
           About Elsoobat
         </h2>
-        <p style={{ fontSize: '16px', textAlign: 'start', marginTop: '40px' }}>
-          Established on April 24, 2019, under the leadership of Chairman Hisham Hassan Mohammed Ahmed Ali, Elsoobat is a proud member of the prestigious El Soobat Group.
+        <p style={{ fontSize: '18px', textAlign: 'start', marginTop: '20px' }}>
+          Founded on April 24, 2019, Elsoobat Energy DMCC is part of the respected El Soobat Group, built on deep-rooted expertise in petroleum and agricultural trade.
         </p>
-        <p style={{ fontSize: '16px', textAlign: 'start' }}>
-          Our team of seasoned professionals in petroleum and <br />
-          agriculture ensures top-tier services and products, adhering <br />
-          strictly to environmental and health regulations.
+        <p style={{ fontSize: '18px', textAlign: 'start' }}>
+          Driven by a commitment to quality, innovation, and transparency, our team of specialists delivers reliable supply solutions — from fuels and lubricants to grains, vegetable oils, and sugar — with full compliance to health and environmental standards.
         </p>
 
         <div style={{ display: 'flex', marginTop: '40px', gap: '40px' }} id="about-uae">
           <p style={{ fontWeight: '600', fontSize: '22px', textAlign: 'start' }}>
-            100% <br /> Compliance
+            100% <br /> Compliant
           </p>
           <p style={{ fontWeight: '600', fontSize: '22px', textAlign: 'start' }}>
-            UAE <br /> Based
+            Headquartered    <br />in the UAE
           </p>
         </div>
 
         <div style={{ textAlign: 'start', marginTop: '20px' }} id="about-button">
-          <Link to='/contact'>
+          <Link to='/about'>
             <button
               style={{
                 border: '1px solid #003C82',
                 borderRadius: '25px',
                 width: '150px',
                 height: '45px',
-                backgroundColor: 'white',
-                color: '#003C82',
+                backgroundColor: '#003C82',
+                color: 'white',
                 fontWeight: '600',
               }}
               id="about-btn"
             >
-              Contact Us
+              Read More
             </button>
           </Link>
         </div>
@@ -99,8 +100,8 @@ export default function Main() {
         <img
           src="/images/refuel.webp"
           alt=""
-          style={{ width: '100%', height: '100%', borderRadius: '12px' }}
-          className="img-fluid"
+          style={{ width: '100%', height: '100%', borderRadius: '12px',objectFit: 'cover', }}
+          className="ab img-fluid"
         />
       </div>
     </div>
@@ -115,7 +116,7 @@ export default function Main() {
 
       {/* ------------------ carousel */}
 
-      <div>
+      <div id="slider-service">
       <ServiceSlider />
     </div>
 
@@ -130,38 +131,42 @@ export default function Main() {
 
       {/* ------------------ cards */}
 
-      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px' }} data-aos="fade-up">Our Values</h2>
+      <h2 className="value-top" style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px',color:'#003C82' }} data-aos="fade-up" >Our Values</h2>
 
 <div className="values-container" style={{backgroundColor:'#F9FEFF'}}>
   <div className="value-card" data-aos="fade-up" data-aos-delay="100">
-    <img src="/images/whitebowl.webp" alt="Quality" />
+          <img src="/images/whitebowl.webp" alt="Quality" />
+          <div className="glass-overlay"></div>
     <div className="value-text">
       <h3>Quality</h3>
-      <p>Delivering high-quality products and exceptional services.</p>
+      <p>Delivering consistently superior products and dependable service with every transaction.</p>
     </div>
   </div>
 
   <div className="value-card" data-aos="fade-up" data-aos-delay="200">
-    <img src="/images/abstract.webp" alt="Professionalism" />
+          <img src="/images/abstract.webp" alt="Professionalism" />
+          <div className="glass-overlay"></div>
     <div className="value-text">
       <h3>Professionalism</h3>
-      <p>Upholding high ethics and performance standards.</p>
+      <p>Operating with integrity, expertise, and industry-grade performance standards.</p>
     </div>
   </div>
 
   <div className="value-card" data-aos="fade-up" data-aos-delay="300">
-    <img src="/images/business.webp" alt="Innovation" />
+          <img src="/images/business.webp" alt="Innovation" />
+          <div className="glass-overlay"></div>
     <div className="value-text">
       <h3>Innovation</h3>
-      <p>Continuously innovating in operations and products.</p>
+      <p>Embracing smarter ways to improve trade, operations, and product offerings.</p>
     </div>
   </div>
 
   <div className="value-card" data-aos="fade-up" data-aos-delay="400">
-    <img src="/images/handshake.webp" alt="Transparency" />
+          <img src="/images/handshake.webp" alt="Transparency" />
+          <div className="glass-overlay"></div>
     <div className="value-text">
       <h3>Transparency</h3>
-      <p>Maintaining integrity in all business relationships.</p>
+      <p>Building trust through open, honest, and accountable business practices.</p>
     </div>
   </div>
 </div>

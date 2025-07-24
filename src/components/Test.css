@@ -160,6 +160,7 @@
   #testimonial-slider .swiper-button-next {
     top: 100%;
     font-size: 20px;
+    margin-top: 20px;
   }
 
   #testimonial-slider .swiper-button-prev {

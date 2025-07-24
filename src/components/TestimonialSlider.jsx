@@ -9,28 +9,28 @@ import 'aos/dist/aos.css';
 
 const testimonials = [
   {
-    text: "I was planning a honeymoon and I found a travel agent who was truly unique. They listened to our needs and created a perfect itinerary.",
-    name: "Alicia",
+    text: "Elsoobat has been a reliable trading partner for years. Their petroleum supply chain is consistent, transparent, and always on schedule.",
+    name: "Ahmed R.",
     img: "/images/test1.avif"
   },
   {
-    text: "Affordable and reliable! I was looking for a budget-friendly vacation and I found a great deal through the travel agency.",
-    name: "Mark",
+    text: "We sourced wheat and vegetable oils from Elsoobat for our processing unit. Excellent quality and timely delivery every time.",
+    name: "Deepak",
     img: "/images/test1.avif"
   },
   {
-    text: "I had a wonderful time in China! The travel agency did a great job of planning everything smoothly. Highly recommend!",
-    name: "Alex",
+    text: "Their team is highly professional and responsive. Whether it’s fuels or lubricants, we’ve never had to worry about availability.",
+    name: "Fatima",
     img: "/images/test1.avif"
   },
   {
-    text: "Very helpful and knowledgeable. They answered all my questions and made sure I had everything I needed.",
-    name: "Sophia",
+    text: "Partnering with Elsoobat helped us scale our agri procurement. Seamless documentation and logistics support too!",
+    name: "Yusuf",
     img: "/images/test1.avif"
   },
   {
-    text: "I had a great time on my trip. Everything went smoothly and I’d definitely recommend them to others.",
-    name: "Emma",
+    text: "Excellent quality and timely delivery every time.Seamless documentation and logistics support too!",
+    name: "Khalid",
     img: "/images/test1.avif"
   }
 ];
@@ -45,7 +45,7 @@ export default function TestimonialSlider() {
     
     <div id="testimonial-slider" className="testimonial-wrapper">
       <h2
-        style={{ marginTop: '150px', fontSize: '40px', fontWeight: '700' }}
+        style={{ marginTop: '150px', fontSize: '40px', fontWeight: '700',color:'#003C82' }}
         data-aos="fade-up"
       >
         Our Happy Clients

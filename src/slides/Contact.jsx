@@ -21,18 +21,20 @@ export default function Contact() {
 
       <Header></Header>
 
-      <div className="container">
-        <div className="row" style={{marginTop:'150px'}}>
+      <div className="container gx-0">
+        <div className="row gx-0 contact-form" style={{marginTop:'150px'}}>
           
           <div className="col-lg-6 col-md-6 col-12">
 
-            <h2 style={{ fontSize: '42px', fontWeight: '600' , marginTop: '50px'}}>Get In Touch</h2>
-          <p style={{ fontSize: '28px', fontWeight: '400',textAlign:'start' }}>Fill out the form below or schedule a meeting with us at your convinience </p>
+            <div style={{paddingTop:'250px'}} className='getintouch'>
+               <h2 style={{ fontSize: '42px', fontWeight: '600'}}>Get In Touch</h2>
+          <p style={{ fontSize: '28px', fontWeight: '400',textAlign:'start',marginTop:'40px' }}>Fill out the form below or schedule a meeting with us at your convinience </p>
+           </div>
 
           </div>
           <div className="col-lg-6 col-md-6 col-12">
 
-            <form style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'550px',height:'525px',borderRadius:'20px',margin:'30px auto'}}>
+            <form style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'auto',height:'625px',borderRadius:'20px',margin:'30px auto',padding:'50px 0px'}}>
             
 
                 <div>
@@ -67,7 +69,7 @@ export default function Contact() {
 
              
 
-              <button style={{backgroundColor:'#003C82',width:'250px',height:'50px',borderRadius:'8px',color:'white',border:'none',fontSize:'20px',fontWeight:'600',marginTop:'20px'}}>Submit Request</button>
+              <button style={{backgroundColor:'#003C82',width:'80%',height:'50px',borderRadius:'8px',color:'white',border:'none',fontSize:'20px',fontWeight:'600',marginTop:'20px'}}>SUBMIT REQUEST</button>
               
             </form>
 
@@ -77,13 +79,13 @@ export default function Contact() {
 
         </div>
       
-      <div className="container-fluid" style={{backgroundColor:'#F9FEFF',padding:'20px 150px 50px 50px'}}>
+      <div className="container-fluid gx-0 contact-details" style={{backgroundColor:'#F9FEFF',padding:'20px 150px 50px 50px'}}>
 
         <h2 style={{fontSize:'35px',textAlign:'start',fontWeight:'500',marginTop:'60px',paddingLeft:'20px'}}>You can also Contact Us via</h2>
         
-        <div className="row">
+        <div className="row gx-0">
 
-          <div className="col-lg-4" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 
             <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
               <img src="/images/call.png" alt="" style={{ height: '30px', width: '30px'}} />
@@ -96,7 +98,7 @@ export default function Contact() {
             </div>
 
           </div>
-          <div className="col-lg-4" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 
             <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
               <img src="/images/mail.png" alt="" style={{ backgroundColor: '#003C82', height: '30px', width: '30px', borderRadius: '50%' }} />
@@ -106,13 +108,13 @@ export default function Contact() {
             </div>
 
           </div>
-          <div className="col-lg-4" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
 
             <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
               <img src="/images/location.png" alt="" style={{ backgroundColor: '#003C82', height: '30px', width: '30px', borderRadius: '50%' }} />
             </div>
             <div>
-              <p style={{fontSize:'20px',fontWeight:'400',paddingLeft:'20px',textAlign:'start'}}>Unit No: 4100 DMCC, Business Centre Level No. 1, Jewellery & Gemplex 3 Dubai, United Arab Emirates PO Box: 18630</p>
+              <p style={{fontSize:'20px',fontWeight:'400',paddingLeft:'20px',textAlign:'start'}}>Unit No: 4100 DMCC, Business Centre Level No. 1, Jewellery & Gemplex 3 Dubai, United Arab Emirates PO Box: 18630</p>
             </div>
 
           </div>

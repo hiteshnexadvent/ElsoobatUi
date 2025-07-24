@@ -36,7 +36,7 @@ export default function FAQSection() {
       <h2 className="faq-heading">Frequently Asked Questions</h2>
       <div className="faq-content">
         <div className="faq-image-box">
-          <img src="/images/faq.avif" alt="FAQ visual" className="faq-image" />
+          <img src="/images/faq.webp" alt="FAQ visual" className="faq-image" />
         </div>
 
         <div className="faq-accordion">

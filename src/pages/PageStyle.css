@@ -1,6 +1,6 @@
 #page-img{
     background-color: aqua;
-    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/aboutbg.webp');
+    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/aboutbg.jpg');
     height: 100vh;
     width: 100%;
     background-position: center;
@@ -15,8 +15,8 @@
 
 .about-card {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 400px;
   border-radius:30px;
   overflow: hidden;
   background-color: #fff;
@@ -65,11 +65,12 @@
   height: 214px;
   border: 1px solid #0070f3;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 112, 243, 0.1);
   text-align: start;
 }
+
 
 .achievement-card img {
   width: 100px;
@@ -89,6 +90,101 @@
   font-weight: 500;
 }
 
+/* ------------ vision */
+
+.glass-overlay {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vision1:hover .glass-overlay {
+  animation: glass-line 1s ease forwards;
+  opacity: 1;
+}
+
+@keyframes glass-line {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+/* presence image hover */
+
+.glass-effect-wrapper {
+  position: relative;
+  width: 237px;
+  height: 213px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.glass-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* The animated white line */
+.glass-overlay {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glass-effect-wrapper:hover .glass-overlay {
+  animation: glass-line-sweep 1s ease forwards;
+  opacity: 1;
+}
+
+@keyframes glass-line-sweep {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
 
 /* ------------- values */
 
@@ -100,11 +196,6 @@
   padding: 20px;
 }
 
-/* .aboutvalue-card:hover {
-  transform: translateY(-8px);
-  padding: 0;
-} */
-
 .aboutvalue-card img {
   width: 100%;
   height: 100%;
@@ -114,9 +205,6 @@
   transition: border-radius 0.3s ease;
 }
 
-/* .aboutvalue-card:hover img {
-  border-radius: 20px;
-} */
 
 .aboutvalue-text {
   position: absolute;
@@ -129,10 +217,6 @@
   transition: padding 0.3s ease;
 }
 
-
-/* .aboutvalue-card:hover .value-text {
-  padding: 0;
-} */
 
 /* ------------- choose us */
 
@@ -225,4 +309,402 @@
 
 .presence-card:hover img {
   border-radius: 20px;
+}
+
+.text-block {
+  width: 70%;
+}
+
+
+/* ------------------- responsive for mobile */
+
+@media (min-width: 370px) and (max-width: 490px) {
+
+  #page-img h1{
+    font-size: 50px !important;
+    margin:200px 0 15px !important;
+  }
+  #page-img p{
+    font-size: 20px !important;
+    padding: 0 !important;
+  }
+
+  /* ------------------------------- about us */
+
+  .main-about{
+    margin-top: 50px !important;
+  }
+
+  .about-card{
+    width: 88% !important;
+    margin-top: 10px !important;
+  }
+
+  .main-about-img p{
+    padding: 0px !important;
+  }
+
+  /* achievment */
+
+  .achieve-heading{
+    margin-top: 10px !important;
+  }
+
+  /* vision */
+
+  .vision-top h2{
+    margin-top: 30px !important;
+  }
+
+  .vision1{
+    width: 90% !important;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .mission{
+    display: block !important;
+  }
+
+  .value-heading{
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .values{
+    display: block !important;
+  }
+
+
+  .values .vision1{
+    padding: 0 10px !important;
+  }
+
+  .presence h2{
+    margin-top: 70px !important;
+  }
+
+  .presence-card{
+    width:95% ;
+  }
+
+
+  /*----------------- service product */
+
+.service-product h2{
+  margin-top: 70px !important;
+  font-size: 30px !important;
+}
+
+.desktop-view {
+  display: none;
+}
+
+.mobile-view {
+  display: block;
+  padding: 20px 0;
+}
+
+.products-slider .image-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.products-slider .image-wrapper img {
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.products-slider .text-content {
+  background: rgba(0, 0, 0, 0.55); 
+  color: #f2f2f2;
+  padding: 10px 14px;
+  border-radius: 0 0 16px 16px;
+  text-align: left;
+  min-height: 90px;
+}
+
+
+.products-slider .text-content h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+
+.products-slider .text-content p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #e0e0e0;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* agriculture */
+
+.agriculture  h2{
+  margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+/* high-performance */
+
+.high-performance h2{
+   margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+.high-performance .hp{
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  margin-top: 10px !important;
+  width: 95%;
+}
+
+/* safe handling */
+
+.safe-handling h2{
+  margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+.safe{
+  margin-left: 10px !important;
+  width: 95% !important;
+}
+
+.safe p{
+  font-size: 20px !important;
+  margin-top: 5px !important;
+  width: 100% !important;
+}
+
+.safe .col1{
+  display: block !important;
+  width: 100% !important;
+}
+
+.glass-img img{
+  width: 100% !important;
+}
+.text-block {
+  width: 100%;
+}
+.safe2{
+  margin-left: 10px !important;
+  width: 95% !important;
+}
+.safe2 .col2{
+  display: block !important;
+  width: 100% !important;
+}
+.safe2 .text-block p{
+  text-align: start !important;
+}
+
+
+}
+
+@media (min-width: 765px) and (max-width:900px) {
+
+  
+  /* ------------------------------- about us */
+
+  .main-about{
+    margin-top: 50px !important;
+  }
+
+  .about-card{
+    width: 88% !important;
+    margin-top: 10px !important;
+  }
+
+  .main-about-img p{
+    padding: 0px !important;
+  }
+
+  /* achievment */
+
+  .achieve-heading{
+    margin-top: 10px !important;
+  }
+
+  /* vision */
+
+  .vision-top h2{
+    margin-top: 70px !important;
+  }
+
+  .vision1{
+    width: 90% !important;
+    margin-left: 20px !important;
+    margin-top: 20px !important;
+  }
+
+
+  .mission{
+    display: block !important;
+  }
+
+  .value-heading{
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .values{
+    display: block !important;
+  }
+
+
+  .values .vision1{
+    padding: 0 10px !important;
+  }
+
+  .presence h2{
+    margin-top: 70px !important;
+  }
+
+  .presence-card{
+    width:95% ;
+  }
+
+  /*----------------- service product */
+  
+  .main-service p{
+    margin-top: 50px !important;
+    padding: 10px 25px ;
+  }
+
+.service-product h2{
+  margin-top: 100px !important;
+  font-size: 30px !important;
+}
+
+/* .desktop-view {
+  display: none;
+}
+
+.mobile-view {
+  display: block;
+  padding: 20px 0;
+} */
+
+.products-slider .image-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.products-slider .image-wrapper img {
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.products-slider .text-content {
+  background: rgba(0, 0, 0, 0.55); 
+  color: #f2f2f2;
+  padding: 10px 14px;
+  border-radius: 0 0 16px 16px;
+  text-align: left;
+  min-height: 90px;
+}
+
+
+.products-slider .text-content h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+
+.products-slider .text-content p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #e0e0e0;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* agriculture */
+
+.agriculture  h2{
+  margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+/* high-performance */
+
+.high-performance h2{
+   margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+.high-performance .hp{
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  margin-top: 10px !important;
+  width: 95%;
+}
+
+/* safe handling */
+
+.safe-handling h2{
+  margin-top: 50px !important;
+  font-size: 30px !important;
+}
+
+.safe{
+  margin-left: 10px !important;
+  width: 95% !important;
+}
+
+.safe p{
+  font-size: 20px !important;
+  margin-top: 5px !important;
+  width: 100% !important;
+}
+
+.safe .col1{
+  display: block !important;
+  width: 100% !important;
+}
+
+.glass-img img{
+  width: 100% !important;
+}
+.text-block {
+  width: 100%;
+}
+.safe2{
+  margin-left: 10px !important;
+  width: 95% !important;
+}
+.safe2 .col2{
+  display: block !important;
+  width: 100% !important;
+}
+.safe2 .text-block p{
+  text-align: start !important;
+}
+
+
+
+
 }
