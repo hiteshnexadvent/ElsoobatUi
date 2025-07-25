@@ -43,7 +43,7 @@ export default function Agriculture() {
   return (
           
         <div className="container agriculture">
-      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '150px',color:'#003C82' }}>
+      <h2 style={{ fontSize: '40px', fontWeight: '700', marginTop: '120px',color:'#003C82' }}>
         Agricultural Products 
       </h2>
       {/* Desktop Layout */}

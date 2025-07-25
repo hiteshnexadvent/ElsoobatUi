@@ -1,6 +1,7 @@
 import React from 'react'
 import BetterBgImg from './BetterBgImg'
 import { FiInstagram, FiFacebook, FiYoutube, FiTwitter } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -74,10 +75,10 @@ export default function Footer() {
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>About</p>
               <div style={{ textAlign: 'left', color: '#FFFFFF', fontSize: '14px', lineHeight: '25px' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li>About Us</li>
-                  <li>Career</li>
-                  <li>News And Article</li>
-                  <li>Partners</li>
+                  <Link to='/about' style={{textDecoration:'none',color: '#FFFFFF'}}><li>About Us</li></Link>
+                                    <Link to='/service' style={{textDecoration:'none',color: '#FFFFFF'}}><li>Services</li></Link>
+                                    <Link to='/blog' style={{textDecoration:'none',color: '#FFFFFF'}}><li>Blogs</li></Link>
+                  
                 </ul>
               </div>
             </div>
@@ -87,8 +88,8 @@ export default function Footer() {
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>Support</p>
               <div style={{ textAlign: 'left', color: '#FFFFFF', fontSize: '14px', lineHeight: '25px' }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li>Contact Us</li>
-                  <li>FAQ</li>
+                  <Link to='/contact'style={{textDecoration:'none',color: '#FFFFFF'}}><li>Contact Us</li></Link>
+                                    <Link to='/contact' style={{textDecoration:'none',color: '#FFFFFF'}}><li>FAQ</li></Link>
                   <li>Privacy Policy</li>
                 </ul>
               </div>

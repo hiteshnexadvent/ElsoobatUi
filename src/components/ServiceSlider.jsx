@@ -72,7 +72,7 @@ export default function ServiceSlider() {
         className="mySwiper"
         breakpoints={{
           0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.3,
             spaceBetween: 80,
           },
           576: {

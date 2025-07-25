@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import './Slide.css'
+import '../pages/PageStyle.css'
 import Header from '../components/Header'
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; 
 import FAQSection from './FAQSection';
 import LocationMap from './LocationMap';
 import Footer from '../components/Footer';
+import Captcha from './Captcha';
 
 export default function Contact() {
 
   const [phone, setPhone] = useState('');
+  const [captchaValue, setCaptchaValue] = useState('');
+
 
   useEffect(() => {
   window.scrollTo(0, 0);
   }, []);
+
+  const handleCaptchaChange = (value) => {
+    console.log("Captcha value:", value);
+    setCaptchaValue(value);
+  };
   
 
   return (
@@ -24,17 +33,17 @@ export default function Contact() {
       <div className="container gx-0">
         <div className="row gx-0 contact-form" style={{marginTop:'150px'}}>
           
-          <div className="col-lg-6 col-md-6 col-12">
+          <div className="col-lg-6 col-md-12 col-12">
 
-            <div style={{paddingTop:'250px'}} className='getintouch'>
-               <h2 style={{ fontSize: '42px', fontWeight: '600'}}>Get In Touch</h2>
+            <div style={{paddingTop:'250px',paddingRight:'20px'}} className='getintouch'>
+               <h2 style={{ fontSize: '42px', fontWeight: '600',textAlign:'start'}}>Get In Touch</h2>
           <p style={{ fontSize: '28px', fontWeight: '400',textAlign:'start',marginTop:'40px' }}>Fill out the form below or schedule a meeting with us at your convinience </p>
            </div>
 
           </div>
-          <div className="col-lg-6 col-md-6 col-12">
+          <div className="col-lg-6 col-md-12 col-12 getintouch-form">
 
-            <form style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'auto',height:'625px',borderRadius:'20px',margin:'30px auto',padding:'50px 0px'}}>
+            <form style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'auto',height:'auto',borderRadius:'20px',margin:'30px auto',padding:'30px 0px'}}>
             
 
                 <div>
@@ -66,6 +75,12 @@ export default function Contact() {
                 <textarea name="message" placeholder='Please describe your query or requirenments...' rows="5" cols="50" style={{width:'80%',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',paddingTop:'10px',borderRadius:'8px'}}></textarea>
               </div>
 
+              {/* CAPTCHA */}
+              
+
+              <div className="captcha" style={{margin:'auto'}}>
+                    <Captcha onChange={`handleCaptchaChange`} />
+              </div>
 
              
 
@@ -79,55 +94,55 @@ export default function Contact() {
 
         </div>
       
-      <div className="container-fluid gx-0 contact-details" style={{backgroundColor:'#F9FEFF',padding:'20px 150px 50px 50px'}}>
+      <div className="container-fluid contact-details gx-0" style={{ backgroundColor: '#F9FEFF', padding: '20px 5vw 50px 5vw' }}>
+  <h2 style={{ fontSize: '2rem', textAlign: 'start', fontWeight: '500', marginTop: '60px', paddingLeft: '10px' }}>
+    You can also Contact Us via
+  </h2>
 
-        <h2 style={{fontSize:'35px',textAlign:'start',fontWeight:'500',marginTop:'60px',paddingLeft:'20px'}}>You can also Contact Us via</h2>
-        
-        <div className="row gx-0">
+  <div className="row gx-0 gy-4 mt-4">
 
-          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-
-            <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
-              <img src="/images/call.png" alt="" style={{ height: '30px', width: '30px'}} />
-            </div>
-            <div>
-              <ul style={{listStyle:'none'}}>
-                <li style={{fontSize:'20px',fontWeight:'400'}}>+(971) 4 222 4414</li>
-                <li style={{fontSize:'20px',fontWeight:'400'}}>+(971) 50 281 6865</li>
-              </ul>
-            </div>
-
-          </div>
-          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-
-            <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
-              <img src="/images/mail.png" alt="" style={{ backgroundColor: '#003C82', height: '30px', width: '30px', borderRadius: '50%' }} />
-            </div>
-            <div>
-              <p style={{fontSize:'20px',fontWeight:'400',paddingLeft:'20px'}}>Info@Elsoobatenergy.com</p> 
-            </div>
-
-          </div>
-          <div className="col-lg-4 col-md-4 col-12" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-
-            <div style={{backgroundColor:'#003C82',height:'70px',width:'70px',borderRadius:'50%',padding:'20px'}}>
-              <img src="/images/location.png" alt="" style={{ backgroundColor: '#003C82', height: '30px', width: '30px', borderRadius: '50%' }} />
-            </div>
-            <div>
-              <p style={{fontSize:'20px',fontWeight:'400',paddingLeft:'20px',textAlign:'start'}}>Unit No: 4100 DMCC, Business Centre Level No. 1, Jewellery & Gemplex 3 Dubai, United Arab Emirates PO Box: 18630</p>
-            </div>
-
-          </div>
-
-        </div>
-
+    {/* Phone */}
+    <div className="col-lg-4 col-md-6 col-12 d-flex align-items-center contact-details-call">
+      <div style={{ backgroundColor: '#003C82', borderRadius: '50%', padding: '15px', marginRight: '15px' }}>
+        <img src="/images/call.png" alt="call" style={{ height: '30px', width: '30px' }} />
       </div>
+      <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
+        <li style={{ fontSize: '18px', fontWeight: '400' }}>+(971) 4 222 4414</li>
+        <li style={{ fontSize: '18px', fontWeight: '400' }}>+(971) 50 281 6865</li>
+      </ul>
+    </div>
 
-          <FAQSection></FAQSection>
+    {/* Email */}
+    <div className="col-lg-4 col-md-6 col-12 d-flex align-items-center contact-details-call">
+      <div style={{ backgroundColor: '#003C82', borderRadius: '50%', padding: '15px', marginRight: '15px' }}>
+        <img src="/images/mail.png" alt="mail" style={{ height: '30px', width: '30px' }} />
+      </div>
+      <p style={{ fontSize: '18px', fontWeight: '400', marginBottom: 0 }}>
+        Info@Elsoobatenergy.com
+      </p>
+    </div>
+
+    {/* Address */}
+    <div className="col-lg-4 col-md-12 col-12 d-flex align-items-center contact-details-call">
+      <div style={{ backgroundColor: '#003C82', borderRadius: '50%', padding: '15px', marginRight: '15px', marginTop: '5px' }}>
+        <img src="/images/location.png" alt="location" style={{ height: '30px', width: '80px' }} />
+      </div>
+      <p style={{ fontSize: '18px', fontWeight: '400', marginBottom: '0',textAlign:'start' }}>
+        Unit No: 4100 DMCC, Business Centre Level No. 1, Jewellery & Gemplex 3, Dubai, United Arab Emirates
+        PO Box: 18630
+      </p>
+    </div>
+
+  </div>
+</div>
+
+          <FAQSection/>
         
-          <LocationMap></LocationMap>
+      <div className='location'>
+        <LocationMap/>
+          </div>
         
-        <Footer></Footer>
+        <Footer/>
 
     </div>
   )

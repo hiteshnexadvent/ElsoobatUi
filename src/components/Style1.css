@@ -5,6 +5,11 @@
     font-family: "Inter", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
 /* ------------------------------------ header */
 
 .navbar-toggler-icon {
@@ -40,6 +45,7 @@
 
 #navbar li:hover a{
   background-color: white;
+  border-radius: 20px;
   color: #003C82 !important;
 }
 
@@ -48,7 +54,7 @@
 
 #bg-img{
     background-color: aqua;
-    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/bgimg.jpg');
+    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/bgimg.webp');
     height: 100vh;
     width: 100%;
     background-position: center;
@@ -80,10 +86,10 @@
 }
 
 .marquee-content span {
-  margin-right: 70px;
+  margin-right: 40px;
   display: inline-block;
   position: relative;
-  padding-left: 90px;
+  padding-left: 40px;
   padding-top: -50px;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   font-size: 25px;
@@ -99,7 +105,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 16px;
+  font-size: 27px;
 }
 
 @keyframes scrollMarquee {
@@ -585,12 +591,12 @@
 
 @media (min-width: 370px) and (max-width: 490px) {
   #bg-img {
-    background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/bgimg.webp');
+    /* background-image: linear-gradient(to bottom, rgba(7, 102, 204, 0.9), rgba(0, 123, 255, 0)), url('/public/images/bgimg.webp'); */
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center;
-    height: auto;
-    min-height: 100vh;
+    height: 80vh; /* Reduced from 100vh */
+    min-height: unset; /* Remove the enforced min-height */
     padding: 100px 20px 60px 20px;
     display: flex;
     align-items: center;
@@ -612,7 +618,7 @@
   }
 
   .about{
-    padding:0px 30px;
+    padding-left: 20px;
   }
   #about-button{
     text-align: center !important;
@@ -620,6 +626,12 @@
 
   .about-img{
     padding: 20px;
+    height: auto !important;
+    
+  }
+  .ab{
+    object-fit: contain !important;
+    height: auto !important;
   }
 
   /* slider-wrapper */
@@ -693,8 +705,12 @@
 
 /* ------ values */
 
+.value-card {
+  width: 360px !important;
+}
+
 .value-top{
-  margin-top: 50px !important;
+  margin-top: 20px !important;
 }
 
 .values-container{
@@ -710,7 +726,13 @@
 /* --------- testimonial */
 
 .testimonial-wrapper h2{
-  margin-top: 50px !important;
+  margin-top: 70px !important;
+  font-size: 30px !important;
+}
+
+#testimonial-slider .testimonial-swiper{
+  margin: auto;
+  width: 95% !important;
 }
 
 

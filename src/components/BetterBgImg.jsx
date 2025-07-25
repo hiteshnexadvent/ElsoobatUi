@@ -3,6 +3,7 @@ import './Style1.css'
 import { Link } from 'react-router-dom'
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; 
+import Captcha from '../slides/Captcha';
 
 export default function BetterBgImg() {
 
@@ -18,15 +19,15 @@ export default function BetterBgImg() {
 
             <div style={{ paddingTop:'100px' }}>
               
-               <h2 style={{ fontSize: '48px', color: 'white', fontWeight: '700',marginTop:'60px', marginLeft: '25px', marginRight: '25px' }}>Partner with Us for Reliable Trade Solutions</h2>
-              <p style={{ fontSize: '18px', fontWeight: '400', color: 'white', paddingTop: '20px',textAlign:'start',marginLeft:'70px' }}>From energy to agriculture, we deliver tailored sourcing  and supply plans built around your business needs. Whether it’s high-grade fuels, lubricants, or premium grains and oils <br /> — our team ensures consistency, quality, and timely delivery.</p>
+               <h2 style={{ fontSize: '48px', color: 'white', fontWeight: '700',marginTop:'60px', marginLeft: '60px', marginRight: '25px',textAlign:'start' }}>Partner with Us for Reliable Trade Solutions</h2>
+              <p style={{ fontSize: '18px', fontWeight: '400', color: 'white', paddingTop: '20px',textAlign:'start',marginLeft:'70px' }}>From energy to agriculture, we deliver tailored sourcing  and supply plans built around your business needs. Whether it’s high-grade fuels, lubricants, or premium grains and oils our team ensures consistency, quality, and timely delivery.</p>
 
          </div>
 
           </div>
           <div className="col-lg-6 col-md-12 col-12">
 
-            <form style={{border:'1px solid #003C82',backgroundColor:'white',width:'auto',height:'525px',borderRadius:'20px',margin:'30px auto'}}>
+            <form style={{border:'1px solid #003C82',backgroundColor:'white',width:'auto',height:'auto',borderRadius:'20px',margin:'30px auto',paddingBottom:'30px'}}>
                         
             
                             <div>
@@ -58,6 +59,11 @@ export default function BetterBgImg() {
                             <textarea name="message" placeholder='Please describe your query or requirenments...' rows="5" cols="50" style={{width:'80%',marginTop:'10px',paddingLeft:'10px',border: '1px solid #cad2db',paddingTop:'10px',borderRadius:'8px'}}></textarea>
                           </div>
             
+              
+              {/* CAPTCHA */}
+              
+
+              <Captcha onChange={`handleCaptchaChange`} />
             
                          
             

@@ -32,7 +32,7 @@ export default function Service() {
 
           <div className="container-fluid high-performance" style={{backgroundColor:'#F9FEFF',paddingBottom:'50px'}}>
               
-            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px',paddingTop:'50px'}}>High-Performance Fuel Solutions</h2>
+            <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'120px',marginBottom:'50px',paddingTop:'50px',color:'#003C82'}}>High-Performance Fuel Solutions</h2>
 
 
               <div className="row">
@@ -98,124 +98,82 @@ export default function Service() {
             <h2 style={{fontSize:'40px',fontWeight:'700',marginTop:'150px',marginBottom:'50px',color:'#003C82'}}>Safe Handling & Storage Systems</h2>
 
 
-              <div className="row safe">
-                
-                  <div className="col-lg-2"></div>
-                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
-                      
-                  <div style={{ display: 'flex' }} className='col1'>
-                          
-                          <div className="text-block">
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',color:'#003C82' }}>1. Advance Safety Protocol</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>We follow strict, internationally recognized safety procedures to protect people, property, and the environment at all times.</p>
-                          </div>
-                          <div className="glass-effect-wrapper">
-                          <img src="/images/safe1.webp" alt="safe" className="glass-img" />
-                          <div className="glass-overlay"></div>
-                          </div>
+              <div className="row mt-5 safe">
+  <div className="col-lg-10 col-md-12 mx-auto" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
+    <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
+      <div className="text-block px-3">
+        <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px', color:'#003C82', textAlign: 'start' }}>1. Advance Safety Protocol</p>
+        <p style={{ fontSize: '20px', fontWeight: '600', marginTop:'20px', textAlign: 'start' }}>
+          We follow strict, internationally recognized safety procedures to protect people, property, and the environment at all times.
+        </p>
+      </div>
+      <div className="glass-effect-wrapper text-center mt-4 mt-lg-0">
+        <img src="/images/safe1.webp" alt="safe" className="glass-img" style={{marginLeft:'100px'}}/>
+        <div className="glass-overlay"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-                      </div>
-
-
-                  </div>
-    
-                  <div className="col-lg-2"></div>
-
-              </div>
 
               {/* row 2 */}
 
               <div className="row mt-5 safe">
-                
-                  <div className="col-lg-2"></div>
-                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }}  data-aos="fade-up" data-aos-delay="100">
-                      
-                      <div style={{display:'flex'}} className='col1'>
-                          
-                          <div className="text-block">
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',color:'#003C82' }}>2. Modern Storage Infrastructure</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start'}}>Our facilities are equipped with cutting-edge storage systems, real-time monitoring, and emergency control mechanisms to ensure secure containment.</p>
-                          </div>
-                          
-                          <div className="glass-effect-wrapper">
-  <img src="/images/safe2.webp" alt="safe" className="glass-img" />
-  <div className="glass-overlay"></div>
+  <div className="col-lg-10 col-md-12 mx-auto" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
+    <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
+      <div className="text-block px-3">
+        <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px', color:'#003C82', textAlign: 'start' }}>2. Modern Storage Infrastructure</p>
+        <p style={{ fontSize: '20px', fontWeight: '600', marginTop:'20px', textAlign: 'start' }}>
+          Our facilities are equipped with cutting-edge storage systems, real-time monitoring, and emergency control mechanisms to ensure secure containment.
+        </p>
+      </div>
+      <div className="glass-effect-wrapper text-center mt-4 mt-lg-0">
+        <img src="/images/safe2.webp" alt="safe" className="glass-img" style={{marginLeft:'100px'}}/>
+        <div className="glass-overlay"></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-                      </div>
-
-
-                  </div>
-    
-                  <div className="col-lg-2"></div>
-
-              </div>
 
 
               {/* row 3 */}
 
-              <div className="row mt-5 safe2">
-                
-                  <div className="col-lg-2"></div>
-                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up"
-      data-aos-delay="200">
-                      
-                      <div style={{display:'flex'}} className='col2'>
-
-                          <div className="glass-effect-wrapper">
-  <img src="/images/safe3.webp" alt="safe" className="glass-img" />
-  <div className="glass-overlay"></div>
+              <div className="row mt-5 safe">
+  <div className="col-lg-10 col-md-12 mx-auto" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
+    <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
+      <div className="text-block px-3">
+        <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px', color:'#003C82', textAlign: 'start' }}>3. Quality Assurance Systems</p>
+        <p style={{ fontSize: '20px', fontWeight: '600', marginTop:'20px', textAlign: 'start' }}>
+          Continuous testing and quality control are implemented at every step to preserve product integrity and meet industry benchmarks.
+        </p>
+      </div>
+      <div className="glass-effect-wrapper text-center mt-4 mt-lg-0">
+        <img src="/images/safe3.webp" alt="safe" className="glass-img" style={{marginLeft:'100px'}} />
+        <div className="glass-overlay"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
-                          
-                          <div className="text-block">
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px',textAlign:'start',padding:'0 30px',color:'#003C82' }}>3. Quality Assurance Systems</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',padding:'0 30px',textAlign:'start'}}>Continuous testing and quality control are implemented at every step to preserve product integrity and meet industry benchmarks.</p>
-                          </div>
-                          
-                          
-
-                      </div>
-
-
-                  </div>
-    
-                  <div className="col-lg-2 mt-5"></div>
-
-              </div>
 
               {/* row 4 */}
 
-              <div className="row mt-5 safe2">
-                
-                  <div className="col-lg-2"></div>
-                  <div className="col-lg-8" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up" data-aos-delay="300">
-                      
-                      <div style={{ display: 'flex' }} className='col2'>
-                          
-                         <div className="glass-effect-wrapper">
-  <img src="/images/safe4.webp" alt="safe" className="glass-img" />
-  <div className="glass-overlay"></div>
+              <div className="row mt-5 safe">
+  <div className="col-lg-10 col-md-12 mx-auto" style={{ border: '1px solid #003C82', padding: '15px', borderRadius: '25px' }} data-aos="fade-up">
+    <div className="d-flex flex-lg-row flex-column align-items-center justify-content-space-evenly">
+      <div className="text-block px-3">
+        <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'20px', color:'#003C82', textAlign: 'start' }}>4. Environmental Responsibility</p>
+        <p style={{ fontSize: '20px', fontWeight: '600', marginTop:'20px', textAlign: 'start' }}>
+         We maintain full compliance with environmental regulations and adopt eco-friendly handling practices to reduce operational impact.
+        </p>
+      </div>
+      <div className="glass-effect-wrapper text-center mt-4 mt-lg-0 ">
+        <img src="/images/safe4.webp" alt="safe" className="glass-img" style={{marginLeft:'100px'}}/>
+        <div className="glass-overlay"></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-                          
-                          <div className="text-block">
-                          <p style={{ fontSize: '30px', fontWeight: '600', marginTop:'5px',textAlign:'start',padding:'0 13px',color:'#003C82' }}>4. Environmental Responsibility</p>
-                          <p style={{fontSize:'20px',fontWeight:'600',marginTop:'40px',textAlign:'start',padding:'0 30px'}}>We maintain full compliance with environmental regulations and adopt eco-friendly handling practices to reduce operational impact.</p>
-                          </div>
-                          
-                          
-
-                      </div>
-
-
-                  </div>
-    
-                  <div className="col-lg-2"></div>
-
-              </div>
 
 
           </div>
