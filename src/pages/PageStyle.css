@@ -542,7 +542,7 @@ img, video {
 }
 
 .presence-banner{
-  height: 50vh !important;
+  height: 100% !important;
 }
 
 }
@@ -894,12 +894,21 @@ img, video {
 
 /* 🔽 On all devices below desktop, stack vertically with text first */
 @media (max-width: 1199px) {
+
+  .presence-banner{
+    height: 100% !important;
+  }
+  .image-box{
+    margin:40px auto !important;
+  }
   .text-box{
     padding: 100px !important;
+    width: 100% !important;
+    margin: auto !important;
   }
   .values {
     margin: auto !important;
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     align-items: center;
   }
 

@@ -12,6 +12,10 @@ body {
 
 /* ------------------------------------ header */
 
+.navbar-toggler {
+  border: 1px solid white;
+}
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -43,11 +47,17 @@ body {
 }
 
 
-#navbar li:hover a{
+#navbar li a {
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+
+#navbar li:hover a {
   background-color: white;
   border-radius: 20px;
   color: #003C82 !important;
 }
+
 
 
 /* ---------------------------------- background image */
@@ -78,7 +88,13 @@ body {
   display: flex;
   width: fit-content;
   animation: scrollMarquee 30s linear infinite;
+  animation-play-state: running;
 }
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 
 .marquee-content {
   display: flex;
@@ -618,10 +634,10 @@ body {
   }
 
   .about{
-    padding-left: 20px;
+    padding-left: 33px;
   }
   #about-button{
-    text-align: center !important;
+    text-align: start !important;
   }
 
   .about-img{

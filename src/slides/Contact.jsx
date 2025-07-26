@@ -36,7 +36,7 @@ export default function Contact() {
           <div className="col-lg-6 col-md-12 col-12">
 
             <div style={{paddingTop:'250px',paddingRight:'20px'}} className='getintouch'>
-               <h2 style={{ fontSize: '42px', fontWeight: '600',textAlign:'start'}}>Get In Touch</h2>
+               <h2 style={{ fontSize: '42px', fontWeight: '600',textAlign:'start',color:'#003C82'}}>Get In Touch</h2>
           <p style={{ fontSize: '28px', fontWeight: '400',textAlign:'start',marginTop:'40px' }}>Fill out the form below or schedule a meeting with us at your convinience </p>
            </div>
 
@@ -107,8 +107,17 @@ export default function Contact() {
         <img src="/images/call.png" alt="call" style={{ height: '30px', width: '30px' }} />
       </div>
       <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: 0 }}>
-        <li style={{ fontSize: '18px', fontWeight: '400' }}>+(971) 4 222 4414</li>
-        <li style={{ fontSize: '18px', fontWeight: '400' }}>+(971) 50 281 6865</li>
+        <li style={{ fontSize: '18px', fontWeight: '400' }}>
+  <a href="tel:+97142224414" style={{ color: 'inherit', textDecoration: 'none' }}>
+    +(971) 4 222 4414
+  </a>
+</li>
+<li style={{ fontSize: '18px', fontWeight: '400' }}>
+  <a href="tel:+971502816865" style={{ color: 'inherit', textDecoration: 'none' }}>
+    +(971) 50 281 6865
+  </a>
+</li>
+
       </ul>
     </div>
 
@@ -118,8 +127,14 @@ export default function Contact() {
         <img src="/images/mail.png" alt="mail" style={{ height: '30px', width: '30px' }} />
       </div>
       <p style={{ fontSize: '18px', fontWeight: '400', marginBottom: 0 }}>
-        Info@Elsoobatenergy.com
-      </p>
+  <a
+    href="mailto:Info@Elsoobatenergy.com"
+    style={{ color: 'inherit', textDecoration: 'none' }}
+  >
+    Info@Elsoobatenergy.com
+  </a>
+</p>
+
     </div>
 
     {/* Address */}

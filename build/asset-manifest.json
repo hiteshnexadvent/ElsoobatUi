@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6a63d048.css",
+    "main.js": "/static/js/main.1b3af0cb.js",
+    "static/js/453.94f8bcd5.chunk.js": "/static/js/453.94f8bcd5.chunk.js",
+    "static/media/betterlife.webp": "/static/media/betterlife.48630c82697d9282e452.webp",
+    "static/media/bgimg.webp": "/static/media/bgimg.b98e759dc089224fe4f3.webp",
+    "static/media/aboutbg.webp": "/static/media/aboutbg.2072cca11d6ab655d3e2.webp",
+    "index.html": "/index.html",
+    "main.6a63d048.css.map": "/static/css/main.6a63d048.css.map",
+    "main.1b3af0cb.js.map": "/static/js/main.1b3af0cb.js.map",
+    "453.94f8bcd5.chunk.js.map": "/static/js/453.94f8bcd5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a63d048.css",
+    "static/js/main.1b3af0cb.js"
+  ]
+}

@@ -348,7 +348,7 @@ export default function About() {
         <div className="row gx-0" style={{marginTop:'80px'}}>
           
           <div className="col-12">
-            <img src="/images/elsoobat-banner.jpg" alt="" style={{width:'100%',height:'95vh'}} className="presence-banner"/>
+            <img src="/images/elsoobat-banner.jpg" alt="" style={{width:'100%',height:'100vh'}} className="presence-banner"/>
           </div>
           
 

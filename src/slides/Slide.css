@@ -58,6 +58,7 @@
   font-weight: 700;
   margin-bottom: 40px;
   margin-top: 80px;
+  color: #003C82;
 }
 
 .faq-content {
@@ -200,11 +201,13 @@
 
   .getintouch h2{
     font-size: 35px !important;
+    padding-left: 15px !important;
   }
 
   .getintouch p{
     font-size: 20px !important;
-    
+    padding-left: 20px !important;
+    margin-top: 30px !important;
   }
 
   .getintouch-form{
@@ -232,6 +235,11 @@
   }
   .faq-heading{
     margin-top: 10px !important;
+  }
+
+  #captcha{
+    justify-content: center !important;
+    margin-left: 0px !important;
   }
 
 }
@@ -263,6 +271,11 @@
   .getintouch-form{
     width: 95% !important;
     margin: auto !important;
+  }
+
+  #captcha{
+    justify-content: left !important;
+    margin-left: 75px !important;
   }
 
 

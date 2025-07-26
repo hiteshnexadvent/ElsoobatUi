@@ -7,7 +7,7 @@ export default function LocationMap() {
       <div className="row gx-0 map">
         <div className="col-12">
           
-      <h2 className="location-title" style={{ textAlign: 'center', color: '#003C82', fontSize: '36px', marginBottom: '30px' }}>
+      <h2 className="location-title" style={{ textAlign: 'center', color: '#003C82', fontSize: '36px',fontWeight:'700', marginBottom: '30px' }}>
         Locate Us Here
       </h2>
       
