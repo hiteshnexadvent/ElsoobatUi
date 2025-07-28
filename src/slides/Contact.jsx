@@ -3,6 +3,7 @@ import './Slide.css'
 import '../pages/PageStyle.css'
 import Header from '../components/Header'
 import PhoneInput from 'react-phone-input-2';
+import axios from "axios";
 import 'react-phone-input-2/lib/style.css'; 
 import FAQSection from './FAQSection';
 import LocationMap from './LocationMap';
@@ -11,18 +12,72 @@ import Captcha from './Captcha';
 
 export default function Contact() {
 
-  const [phone, setPhone] = useState('');
   const [captchaValue, setCaptchaValue] = useState('');
-
-
-  useEffect(() => {
-  window.scrollTo(0, 0);
-  }, []);
+  const [formData, setFormData] = useState({ name: '', email: '', mobile: '', country: '', city: '', message: '' });
 
   const handleCaptchaChange = (value) => {
     console.log("Captcha value:", value);
     setCaptchaValue(value);
   };
+
+  const handleChange = (e) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+
+  const handlePhoneChange = (phone) => {
+    setFormData({ ...formData, mobile: phone });
+  };
+  
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!captchaValue) {
+    alert("Please complete the CAPTCHA");
+    return;
+  }
+
+  try {
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKEND_API_URL}/admin/user-query`,
+      {
+        ...formData,
+        captcha: captchaValue,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      }
+    );
+
+    // Success message from backend
+    if (response.data.message) {
+      alert(response.data.message); 
+    }
+
+    setFormData({
+      name: "", email: "", mobile: "", country: "", city: "", message: "",
+    });
+    setCaptchaValue("");
+
+  } catch (error) {
+    if (error.response && error.response.data && error.response.data.message) {
+      alert(error.response.data.message); 
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
+  }
+};
+
+
+
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+  }, []);
   
 
   return (
@@ -43,46 +98,53 @@ export default function Contact() {
           </div>
           <div className="col-lg-6 col-md-12 col-12 getintouch-form">
 
-            <form style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'auto',height:'auto',borderRadius:'20px',margin:'30px auto',padding:'30px 0px'}}>
+            <form onSubmit={handleSubmit} style={{border:'1px solid #003C82',borderTop: '10px solid #003C82',width:'auto',height:'auto',borderRadius:'20px',margin:'30px auto',padding:'30px 0px'}}>
             
-
                 <div>
-                <input type="text" name='name' placeholder='Your Name' style={{width:'80%',height:'45px',marginTop:'20px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
+                <input type="text" name='name' placeholder='Your Name' value={formData.name} onChange={handleChange} style={{width:'80%',height:'45px',marginTop:'20px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
               </div>
               <div>
-                <input type="email" name='email' placeholder='Enter Your Email' style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
+                <input type="email" name='email' placeholder='Enter Your Email' value={formData.email} onChange={handleChange} style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
               </div>
-              <div className="phone-input" style={{ margin: '20px auto 0' ,width:'82%',height:'45px',marginTop:'10px',paddingLeft:'10px'}}>
+              <div className="phone-input"  style={{ margin: '20px auto 0' ,width:'82%',height:'45px',marginTop:'10px',paddingLeft:'10px'}}>
                   <PhoneInput
-                    country={'ae'} // UAE default
-                    value={phone}
-                    onChange={setPhone}
-                    enableSearch={true}
-                    inputProps={{
-                      name: 'mobile',
-                      required: true,
-                      placeholder: 'Enter Your Phone Number',
-                    }}
-                  />
+                  country={'ae'}
+                  
+                  value={formData.mobile}
+                  onChange={handlePhoneChange}
+                  
+                  enableSearch={true}
+                  
+                  inputProps={{
+    
+                    name: 'mobile',
+                    
+                    required: true,
+    
+                    placeholder: 'Enter Your Phone Number',
+    
+                  }}
+                  
+                />
+                
+
                 </div>
               <div>
-                <input type="text" name="country" style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}} placeholder="Enter Your Country" />
+                <input type="text" name="country" value={formData.country} onChange={handleChange} style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}} placeholder="Enter Your Country" />
               </div>
               <div>
-                <input type="text" name="city" placeholder="Enter Your City/State" style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
+                <input type="text" name="city" placeholder="Enter Your City/State" value={formData.city} onChange={handleChange} style={{width:'80%',height:'45px',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',borderRadius:'8px'}}/>
               </div>
               <div>
-                <textarea name="message" placeholder='Please describe your query or requirenments...' rows="5" cols="50" style={{width:'80%',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',paddingTop:'10px',borderRadius:'8px'}}></textarea>
+                <textarea name="message" placeholder='Please describe your query or requirenments...' value={formData.message} onChange={handleChange} rows="5" cols="50" style={{width:'80%',marginTop:'10px',paddingLeft:'10px',border: '1px solid #003C82',paddingTop:'10px',borderRadius:'8px'}}></textarea>
               </div>
 
               {/* CAPTCHA */}
               
 
               <div className="captcha" style={{margin:'auto'}}>
-                    <Captcha onChange={`handleCaptchaChange`} />
+                <Captcha onChange={handleCaptchaChange} />
               </div>
-
-             
 
               <button style={{backgroundColor:'#003C82',width:'80%',height:'50px',borderRadius:'8px',color:'white',border:'none',fontSize:'20px',fontWeight:'600',marginTop:'20px'}}>SUBMIT REQUEST</button>
               
