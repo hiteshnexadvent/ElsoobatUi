@@ -4,6 +4,7 @@ import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Captcha from "../slides/Captcha";
+import { toast } from 'react-toastify';
 
 export default function BetterBgImg() {
   const [captchaValue, setCaptchaValue] = useState("");
@@ -33,7 +34,7 @@ export default function BetterBgImg() {
     e.preventDefault();
 
     if (!captchaValue) {
-      alert("Please complete the CAPTCHA");
+      toast.warning("Please complete the CAPTCHA");
       return;
     }
 
@@ -53,7 +54,7 @@ export default function BetterBgImg() {
       );
 
       if (response.data.message) {
-        alert(response.data.message);
+        toast.success(response.data.message);
       }
 
       setFormData({
@@ -71,9 +72,9 @@ export default function BetterBgImg() {
         error.response.data &&
         error.response.data.message
       ) {
-        alert(error.response.data.message);
+        toast.error(error.response.data.message);
       } else {
-        alert("Something went wrong. Please try again later.");
+        toast.error("Something went wrong. Please try again later.");
       }
     }
   };

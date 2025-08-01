@@ -45,15 +45,15 @@ export default function Blogs() {
     >
     Trending Blogs
     </h2>
-  <div className="row gx-0 blogs-row">
+  <div className="row gx-0 blogs-row ">
     {blogs.map((item, index) => (
-      <div key={index} className="col-lg-4 col-md-6 col-12 mb-4 mt-5">
+      <div key={index} className="col-lg-4 col-md-6 col-12 mb-4 mt-5 blogs-boxes">
         <div
-          className="card h-100 shadow"
+          className="card h-100 shadow blogs-boxes1"
           style={{
             border: "1px solid #8d9094",
             padding: "20px",
-            width: "300px",
+            width: "90%",
             height:'50vh',
           }}
           id="blog-cards"

@@ -7,12 +7,16 @@ import Contact from './slides/Contact';
 import Cursor from './slides/Cursor';
 import Blogs from './slides/Blogs';
 import BlogRead from './slides/BlogRead';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
 
       {/* <Cursor></Cursor> */}
+
+      <ToastContainer position="top-right" autoClose={3000} />
       
       <Router>
         <Routes>

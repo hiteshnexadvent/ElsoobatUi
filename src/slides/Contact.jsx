@@ -9,6 +9,7 @@ import FAQSection from './FAQSection';
 import LocationMap from './LocationMap';
 import Footer from '../components/Footer';
 import Captcha from './Captcha';
+import { toast } from 'react-toastify';
 
 export default function Contact() {
 
@@ -16,7 +17,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', mobile: '', country: '', city: '', message: '' });
 
   const handleCaptchaChange = (value) => {
-    console.log("Captcha value:", value);
     setCaptchaValue(value);
   };
 
@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   if (!captchaValue) {
-    alert("Please complete the CAPTCHA");
+    toast.warning("Please complete the CAPTCHA");
     return;
   }
 
@@ -53,9 +53,8 @@ const handleSubmit = async (e) => {
       }
     );
 
-    // Success message from backend
     if (response.data.message) {
-      alert(response.data.message); 
+      toast.success(response.data.message); 
     }
 
     setFormData({
@@ -65,9 +64,9 @@ const handleSubmit = async (e) => {
 
   } catch (error) {
     if (error.response && error.response.data && error.response.data.message) {
-      alert(error.response.data.message); 
+      toast.error(error.response.data.message); 
     } else {
-      alert("Something went wrong. Please try again later.");
+      toast.error("Something went wrong. Please try again later.");
     }
   }
 };
