@@ -185,7 +185,7 @@
   }
 }
 
-@media (min-width: 370px) and (max-width: 490px) {
+@media (min-width: 360px) and (max-width: 490px) {
 
   .main-contact p{
     padding: 0 !important;
@@ -246,6 +246,15 @@
     margin: auto !important;
   }
 
+  .blogs-read{
+    width: 95% !important;
+    margin: auto !important;
+  }
+
+  .blogs-read img{
+    height: auto !important;
+  }
+
 }
 
 @media (min-width: 765px) and (max-width:900px) {
@@ -280,6 +289,19 @@
   #captcha{
     justify-content: left !important;
     margin-left: 75px !important;
+  }
+
+  #page-img p{
+    padding: 20px !important;
+  }
+
+  .blogs-read{
+    width: 95% !important;
+    margin: auto !important;
+  }
+
+  .blogs-read img{
+    height: auto !important;
   }
 
 

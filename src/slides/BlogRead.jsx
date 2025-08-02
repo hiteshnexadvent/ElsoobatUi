@@ -22,19 +22,19 @@ export default function BlogRead() {
       
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-12 col-12 blogs-read" >
             <img
               src={`${process.env.REACT_APP_BACKEND_API_URL}${image}`}
               alt=""
               style={{ height:'370px',width:'100%',borderRadius:'20px' }}/>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-md-12 col-12">
             <p style={{padding:'30px',textAlign:'start'}}>{para_one}</p>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <p style={{textAlign:'start',marginTop:'50px'}}>{para_two}</p>
+            <p style={{textAlign:'start',marginTop:'50px',padding:'20px'}}>{para_two}</p>
           </div>
         </div>
       </div>
