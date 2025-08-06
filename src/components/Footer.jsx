@@ -1,9 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BetterBgImg from './BetterBgImg'
 import { FiInstagram, FiFacebook, FiYoutube, FiTwitter } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export default function Footer() {
+
+  const [formData, setformData] = useState({ email: '' });
+  
+  const handleChange = (e) => {
+    setformData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+      
+      const fetchapi=async () => {
+        const response = await axios.post(
+          `${process.env.REACT_APP_BACKEND_API_URL}/admin/newsletter`, formData, {
+            headers: {
+              'Content-Type':'application/json'
+            },
+            withCredentials: true
+        })
+
+        if (response.data.message) {
+              toast.success(response.data.message); 
+            }
+        
+            setformData({
+              email: "",
+            });
+
+      }
+      
+      fetchapi();
+
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+            toast.error(error.response.data.message); 
+          } else {
+            toast.error("Something went wrong. Please try again later.");
+          }
+    }
+
+
+  }
+  
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,7 +80,8 @@ export default function Footer() {
             </div>
 
             {/* Newsletter */}
-            <div className="col-lg-4 col-md-7 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
+
+              <div className="col-lg-4 col-md-7 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
               <p style={{ fontSize: '24px', fontWeight: '700', color: '#FFFFFF', textAlign: 'start' }}>Take a ride with us</p>
               <p style={{ fontSize: '14px', color: '#FFFFFF', textAlign: 'start' }}>
                 Subscribe to be the first to know <br />
@@ -42,9 +89,13 @@ export default function Footer() {
                 launches, industry updates, and <br />
                 exclusive offers.
               </p>
+
+              <form onSubmit={handleSubmit}>
+
               <div className="newsletter-wrapper pt-2">
                 <div className="newsletter-input-group d-flex flex-wrap gap-2">
-                  <input
+                    <input
+                    name='email'
                     type="email"
                     placeholder="Enter your email address"
                     className="newsletter-input"
@@ -54,7 +105,11 @@ export default function Footer() {
                       borderRadius: '6px',
                       border: 'none',
                       minWidth: '200px',
-                    }}
+                      }}
+                      
+                      onChange={handleChange}
+                      value={formData.email}
+
                   />
                   <button className="newsletter-button" style={{
                     padding: '8px 16px',
@@ -65,10 +120,17 @@ export default function Footer() {
                     border: 'none',
                   }}>
                     Subscribe
-                  </button>
+                    </button>
+                    
+                    
+                  </div>
+                  
                 </div>
-              </div>
+                </form>
             </div>
+
+
+            
 
             {/* About */}
             <div className="col-lg-2 col-md-4 col-12 mb-4 p-3 me-3" style={{ border: '1px solid #FFFFFF', borderRadius: '20px' }}>
