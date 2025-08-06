@@ -198,7 +198,7 @@ export default function About() {
               
             }}
           >
-            <p style={{ fontSize: "20px", textAlign: "start" }}>
+            <p style={{ fontSize: "20px", textAlign: "justify" }}>
               At Elsoobat, our mission is to deliver tailored, reliable solutions in the petroleum and agricultural sectors by deeply understanding our clients’ unique needs. We are committed to a customer-first approach that aligns with market dynamics and global best practices, while upholding the highest standards of quality, safety, and environmental responsibility in every aspect of our operations.
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function About() {
   {/* Block 1: Text then image */}
   <div className="values">
     <div className="vision1 text-box" data-aos="fade-right">
-      <p style={{ fontSize: "20px", paddingTop: "50px" }}>
+      <p style={{ fontSize: "20px", paddingTop: "30px",textAlign:'justify' }}>
         At Elsoobat, quality is non-negotiable. We ensure that every product we trade — whether petroleum derivatives or agricultural commodities — meets the highest international standards. From sourcing to delivery, we maintain strict quality controls to guarantee safety, consistency, and customer satisfaction at every touchpoint.
       </p>
     </div>
@@ -264,7 +264,7 @@ export default function About() {
   {/* Block 2: Image then text (reverse on desktop only) */}
   <div className="values reverse">
     <div className="vision1 text-box" data-aos="fade-right">
-      <p style={{ fontSize: "20px", paddingTop: "60px" }}>
+      <p style={{ fontSize: "20px", paddingTop: "40px",textAlign:'justify' }}>
         We conduct our business with integrity, respect, and a deep commitment to excellence. Our team of experienced professionals brings industry expertise, ethical discipline, and accountability to every project, ensuring seamless execution and dependable outcomes for our clients and partners.
 
       </p>
@@ -283,7 +283,7 @@ export default function About() {
   {/* Block 3: Text then image */}
   <div className="values">
     <div className="vision1 text-box" data-aos="fade-right">
-      <p style={{ fontSize: "20px", paddingTop: "60px" }}>
+      <p style={{ fontSize: "20px", paddingTop: "40px",textAlign:'justify' }}>
         In a constantly evolving global market, we stay ahead by embracing change. We continuously seek smarter, more efficient ways to operate — from adopting new technologies to improving our supply chain processes — ensuring our clients benefit from modern, forward-looking trade solutions.
       </p>
     </div>
@@ -301,7 +301,7 @@ export default function About() {
   {/* Block 4: Image then text (reverse on desktop only) */}
   <div className="values reverse">
     <div className="vision1 text-box" data-aos="fade-right">
-      <p style={{ fontSize: "20px", paddingTop: "60px" }}>
+      <p style={{ fontSize: "20px", paddingTop: "40px",textAlign:'justify' }}>
         We believe in open communication and honest business practices. Whether it’s pricing, timelines, or logistics, we ensure our partners have full visibility and confidence throughout the trade cycle — building trust that stands the test of time.
 
       </p>
