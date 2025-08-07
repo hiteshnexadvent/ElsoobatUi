@@ -119,7 +119,7 @@ export default function ChooseUsSlider() {
               <div className="text-only-slide">
                 <h2 className="plain-title">Why Choose Us</h2>
                 <p className="plain-desc">
-                  We deliver end-to-end trading solutions across the energy and agriculture sectors — tailored to meet the demands of today’s fast-moving markets. Whether it’s high-grade fuels and lubricants, or premium grains and edible oils, Elsoobat ensures every product is delivered with precision, compliance, and reliability.
+                  We deliver end-to-end trading solutions across the energy and agriculture sectors — tailored to meet the demands of today’s fast-moving markets. 
                 </p>
               </div>
             </div>

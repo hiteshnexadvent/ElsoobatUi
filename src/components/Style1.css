@@ -162,17 +162,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card-container:hover{
+.card-container img:hover{
     padding: 0;
 }
 
 
-.text-only-slide {
+/* .text-only-slide {
   max-width: 320px;
   padding: 0px 20px;
   text-align: left;
   margin-top: 170px;
-}
+} */
 
 .no-border {
   padding: 0;
@@ -634,7 +634,8 @@ body {
   }
 
   .about{
-    padding-left: 33px;
+    padding-left: 31px;
+    padding-right: 22px;
   }
   #about-button{
     text-align: start !important;
@@ -794,6 +795,19 @@ body {
     margin-left: 10px !important;
   }
 
+  .slide-inner {
+    margin-left: 70px !important;
+  }
+
+  .team45 h2{
+    font-size: 35px !important;
+    margin-top: 40px !important;
+  }
+
+  .newsletter-button{
+    padding: 5px !important;
+    width: auto !important;
+  }
   
 
 

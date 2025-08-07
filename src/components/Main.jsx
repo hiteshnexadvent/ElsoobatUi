@@ -45,11 +45,11 @@ export default function Main() {
         <h2 style={{ fontSize: '40px', fontWeight: '700', textAlign: 'start', color: '#003C82' }}>
           About Elsoobat
         </h2>
-        <p style={{ fontSize: '18px', textAlign: 'start', marginTop: '20px' }}>
+        <p style={{ fontSize: '18px', textAlign: 'justify', marginTop: '20px' }}>
           Founded on April 24, 2019, Elsoobat Energy DMCC is part of the respected El Soobat Group,
           built on deep-rooted expertise in petroleum and agricultural trade.
         </p>
-        <p style={{ fontSize: '18px', textAlign: 'start' }}>
+        <p style={{ fontSize: '18px', textAlign: 'justify' }}>
           Driven by a commitment to quality, innovation, and transparency, our team of specialists delivers
           reliable supply solutions — from fuels and lubricants to grains, vegetable oils, and sugar — with
           full compliance to health and environmental standards.
@@ -120,6 +120,9 @@ export default function Main() {
       {/* ------------------ carousel */}
 
       <div id="slider-service">
+        <h2 style={{ fontSize: '40px', fontWeight: '700', color: '#003C82' }}>
+          Our Services
+        </h2>
       <ServiceSlider />
     </div>
 
@@ -180,7 +183,12 @@ export default function Main() {
       {/* ------------------ cards */}
 
       
-      <Team/>
+      <div className="team45">
+        <h2 style={{ fontSize: '40px', fontWeight: '700', color: '#003C82',marginTop:'140px' }}>
+          Our Members
+        </h2>
+        <Team/>
+      </div>
 
       {/* ------------------- clients */}
 

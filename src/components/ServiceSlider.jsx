@@ -75,6 +75,10 @@ export default function ServiceSlider() {
             slidesPerView: 1.3,
             spaceBetween: 80,
           },
+          412: {
+            slidesPerView: 1.3,
+            spaceBetween: 40,
+          },
           576: {
             slidesPerView: 1.2,
             spaceBetween: 20,
@@ -89,18 +93,6 @@ export default function ServiceSlider() {
           }
         }}
       >
-        {/* Our Services Slide */}
-<SwiperSlide>
-  <div className="slide-inner no-border" data-aos="fade-right">
-    <div className="text-only-slide">
-      <h2 className="plain-title">Our Services</h2>
-      <p className="plain-desc">
-        We deliver end-to-end trading solutions across the energy and agriculture sectors — tailored to meet the demands of today’s fast-moving markets. Whether it’s high-grade fuels and lubricants, or premium grains and edible oils, Elsoobat ensures every product is delivered with precision, compliance, and reliability.
-      </p>
-    </div>
-  </div>
-</SwiperSlide>
-
 
         {/* Service Cards */}
         {services.map((item, index) => (

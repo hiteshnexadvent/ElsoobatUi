@@ -76,6 +76,10 @@ export default function Team() {
             slidesPerView: 1.3,
             spaceBetween: 80,
           },
+          412: {
+            slidesPerView: 1.3,
+            spaceBetween: 40,
+          },
           576: {
             slidesPerView: 1.2,
             spaceBetween: 20,
@@ -90,17 +94,7 @@ export default function Team() {
           }
         }}
       >
-        {/* Our Services Slide */}
-<SwiperSlide>
-  <div className="slide-inner no-border" data-aos="fade-right">
-    <div className="text-only-slide">
-      <h2 className="plain-title">Our Members</h2>
-      <p className="plain-desc">
-        A dedicated team of industry experts committed to delivering trusted solutions in oil and agriculture with integrity and precision.
-      </p>
-    </div>
-  </div>
-</SwiperSlide>
+
 
 
         {/* Service Cards */}
