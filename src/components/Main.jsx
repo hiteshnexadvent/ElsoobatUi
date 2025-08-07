@@ -123,6 +123,8 @@ export default function Main() {
         <h2 style={{ fontSize: '40px', fontWeight: '700', color: '#003C82' }}>
           Our Services
         </h2>
+        <p style={{padding:'40px 150px 20px 150px',textAlign:'start'}}>We deliver end-to-end trading solutions across the energy and agriculture sectors — tailored to meet the demands of today’s fast-moving markets. Whether it’s high-grade fuels and lubricants, or premium grains and edible oils, Elsoobat ensures every product is delivered with precision, compliance, and reliability.
+</p>
       <ServiceSlider />
     </div>
 

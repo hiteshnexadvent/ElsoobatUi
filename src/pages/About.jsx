@@ -330,6 +330,7 @@ export default function About() {
             fontWeight: "700",
             marginTop: "150px",
             marginBottom: "50px",
+            color:'#003C82'
           }}
         >
           Our Presence

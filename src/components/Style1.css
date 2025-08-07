@@ -167,12 +167,12 @@ body {
 }
 
 
-/* .text-only-slide {
+.text-only-slide {
   max-width: 320px;
   padding: 0px 20px;
   text-align: left;
   margin-top: 170px;
-} */
+}
 
 .no-border {
   padding: 0;
@@ -661,6 +661,10 @@ body {
     display: none;
   }
 
+  #slider-service p{
+    padding: 30px !important;
+  }
+
   /* product */
 
 .desktop-view {
@@ -839,6 +843,9 @@ body {
 
   .slider-buttons{
     display: none;
+  }
+  #slider-service p{
+    padding: 20px !important;
   }
 
   /* product */
